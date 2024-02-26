@@ -1,1 +1,4 @@
-# Project-Software-Engineer
+Thành viên nhóm:
+22022517 Bùi Tiến Sâm
+22022521 Nguyễn Văn Mạnh
+22022597 Trịnh Đắc Phú
