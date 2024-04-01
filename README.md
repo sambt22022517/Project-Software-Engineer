@@ -1,4 +1,4 @@
-# Sản phẩm : Web thương mại điện tử
+# Sản phẩm : Web thương mại điện tử The Middles
 
 ### Thành viên nhóm:
 - 22022517 Bùi Tiến Sâm
