@@ -17,18 +17,6 @@
 The_Middle\
 |---all_static_files\
 |---global_static_files\
-|---sign_up_in\
-    |---migrations\
-        |---__init__.py
-    |---static\
-    |---template\
-    |---__init__.py
-    |---admin.py
-    |---apps.py
-    |---models.py
-    |---tests.py
-    |---urls.py
-    |---views.py
 |---The_Middle\
     |---__init__.py
     |---asgi.py
