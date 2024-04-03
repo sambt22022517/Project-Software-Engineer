@@ -9,18 +9,19 @@
 ### Công cụ sử dụng Django
 
 ### Trước khi làm việc
-Tải những thư viện cần thiết bằng `pip install -r requirements.txt`
+- Tải những thư viện cần thiết bằng `pip install -r requirements.txt`
+- Học thêm về Django nếu chưa biết cách sử dụng [tại đây](https://www.w3schools.com/django/index.php)
 
 ## Cấu trúc sắp xếp file
 ```
-The_Middle
-|---all_static_files
-|---global_static_files
-|---sign_up_in
-    |---migrations
+The_Middle\
+|---all_static_files\
+|---global_static_files\
+|---sign_up_in\
+    |---migrations\
         |---__init__.py
-    |---static
-    |---template
+    |---static\
+    |---template\
     |---__init__.py
     |---admin.py
     |---apps.py
@@ -28,7 +29,7 @@ The_Middle
     |---tests.py
     |---urls.py
     |---views.py
-|---The_Middle
+|---The_Middle\
     |---__init__.py
     |---asgi.py
     |---setting.py
