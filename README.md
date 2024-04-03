@@ -10,7 +10,7 @@
 
 ### Trước khi làm việc
 - Tải những thư viện cần thiết bằng `pip install -r requirements.txt`
-- Học thêm về Django nếu chưa biết cách sử dụng [tại đây](https://www.w3schools.com/django/index.php)
+- Học thêm về Django nếu chưa biết cách sử dụng [tại đây](https://www.w3schools.com/django/index.php).
 
 ## Cấu trúc sắp xếp file
 ```
