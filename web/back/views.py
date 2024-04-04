@@ -4,7 +4,7 @@ from django.views.decorators.http import require_http_methods
 from .models import Todo
 
 def index(request):
-    return HttpResponse("Home")
+    return render(request, 'index.html')
 
 def removepunc(request):
     return HttpResponse("remove punc")
