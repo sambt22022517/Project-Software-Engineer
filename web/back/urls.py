@@ -3,6 +3,11 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name="index"),
-   
+    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('about/', views.about, name='about'),
+    path('removepunc', views.removepunc, name='rempun'),
+    path('capitalizefirst', views.capfirst, name='capfirst'),
+    path('newlineremove', views.newlineremove, name='newlineremove'),
+    path('spaceremove', views.spaceremove, name='spaceremove')
 ]

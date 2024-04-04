@@ -3,30 +3,21 @@ from django.views.decorators.http import require_http_methods
 
 from .models import Todo
 
-# Create your views here.
 def index(request):
-    todos = Todo.objects.all()
-    return render(request, "base.html", {"todo_list": todos})
-    # return HttpResponse("Hello World!!")
+    return HttpResponse("Home")
+
+def removepunc(request):
+    return HttpResponse("remove punc")
+
+def capfirst(request):
+    return HttpResponse("capitalize first")
+
+def newlineremove(request):
+    return HttpResponse("capitalize first")
 
 
-@require_http_methods(["POST"])
-def add(request):
-    # if request.method == "POST":
-    title = request.POST["title"]
-    todo = Todo(title=title)
-    todo.save()
-    return redirect("index")
+def spaceremove(request):
+    return HttpResponse("space remover")
 
-
-def update(request, todo_id):
-    todo = Todo.objects.get(id=todo_id)
-    todo.complete = not todo.complete
-    todo.save()
-    return redirect("index")
-
-
-def delete(request, todo_id):
-    todo = Todo.objects.get(id=todo_id)
-    todo.delete()
-    return redirect("index")
+def charcount(request):
+    return HttpResponse("charcount ")
