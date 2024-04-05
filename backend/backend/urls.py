@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from customers import views
+from users import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^api/customers/$', views.customers_list),
     re_path(r'^api/customers/([0-9])$', views.customers_detail),
+    path('register', user_views.register, name='register')
 ]
