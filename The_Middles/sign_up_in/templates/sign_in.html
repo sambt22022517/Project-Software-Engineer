@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="vi">
+    <head>
+        <title>
+            Sign-in
+        </title>
+        <link rel="stylesheet" href="{%static 'css/sign_in.css'%}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="sign_in">
+            <div class="welcome">
+                <a href="/">
+                    <img src="{%static 'img/logo.png'%}" alt="logo">
+                </a>
+                <div class="slogan">
+                    <h3 class="first">Đi khắp bốn phương</h3>
+                    <h3 class="second">Không đâu bằng nhà</h3>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h1 class="title">
+                    Đăng nhập
+                </h1>
+                <form action="/signin">
+                    <input type="text" name="user_phone" placeholder="Tên đăng nhập/Số điện thoại">
+                    <input type="password" name="password" placeholder="Mật khẩu">
+                    <input type="submit" value="Đăng nhập">
+                </form>
+                <div class="not_account">
+                    <p>
+                        Bạn chưa có tài khoản ? <a href="/sign-up">Đăng ký</a>
+                    </p>
+                </div>
+            </div>
+            <a class="close_sign_in" href="/">
+                <img src="{%static 'img/close_button.png'%}" alt="Close Button">
+            </a>
+        </div>
+    </body>
+</html>

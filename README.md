@@ -25,3 +25,22 @@ The_Middle\
     |---wsgi.py
 |---manage.py
 ```
+
+## Cách chạy thử demo sign-up-in
+**Lưu ý rằng phải thực hiện công việc trong phần Trước khi làm việc.**
+- Mở cmd tại folder chứa file `manage.py`.
+- Copy `python manage.py runserver` vào cmd và Enter.
+  Kết quả sẽ kiểu như này:
+```
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 06, 2024 - 14:13:07
+Django version 5.0.3, using settings 'The_Middles.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+```
+- Phương thức trải nghiệm:
+  + Nhập đường link http://127.0.0.1:8000/sign-in để trải nghiệm chức năng đăng nhập.
+  + Nhập đường link http://127.0.0.1:8000/sign-up để trải nghiệm chức năng đăng ký.
+  + Sử dụng các đường link trực tiếp trên trang web để chuyển từ trang này sang trang khác cũng được.
