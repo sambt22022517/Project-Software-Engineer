@@ -41,6 +41,6 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 ```
 - Phương thức trải nghiệm:
-  + Nhập đường link http://127.0.0.1:8000/sign-in để trải nghiệm chức năng đăng nhập.
-  + Nhập đường link http://127.0.0.1:8000/sign-up để trải nghiệm chức năng đăng ký.
+  + Nhập đường link http://127.0.0.1:8000/login để trải nghiệm chức năng đăng nhập.
+  + Nhập đường link http://127.0.0.1:8000/register để trải nghiệm chức năng đăng ký.
   + Sử dụng các đường link trực tiếp trên trang web để chuyển từ trang này sang trang khác cũng được.
