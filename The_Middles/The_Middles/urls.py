@@ -1,5 +1,5 @@
 """
-URL configuration for backend project.
+URL configuration for The_Middles project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -19,6 +19,7 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, re_path
 from customers import views
 from users import views as user_views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),

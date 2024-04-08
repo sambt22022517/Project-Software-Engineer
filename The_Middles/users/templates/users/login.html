@@ -6,12 +6,12 @@
         <title>
             Sign-in
         </title>
-        <link rel="stylesheet" href="{%static 'css/sign_in.css'%}">
+        <link rel="stylesheet" href="{%static 'css/login.css'%}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
-        <div class="sign_in">
+        <div class="login">
             <div class="welcome">
                 <a href="/">
                     <img src="{%static 'img/logo.png'%}" alt="logo">
@@ -28,7 +28,7 @@
                 </h1>
                 <form action="/signin">
                     {{form}}
-                    <input type="submit" value="Đăng nhập">
+                    <button type="submit">Đăng nhập</button>
                 </form>
                 <div class="not_account">
                     <p>
@@ -36,7 +36,7 @@
                     </p>
                 </div>
             </div>
-            <a class="close_sign_in" href="/">
+            <a class="close_login" href="/">
                 <img src="{%static 'img/close_button.png'%}" alt="Close Button">
             </a>
         </div>

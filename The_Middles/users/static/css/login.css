@@ -18,7 +18,7 @@ body {
     padding: 0;
 }
 
-.register {
+.login {
     position: relative;
     min-width: 700px;
     max-width: 50%;
@@ -26,8 +26,8 @@ body {
     margin: 100px auto;
 }
 
-.register .welcome {
-    background-color: rgb(255, 0, 166);
+.login .welcome {
+    background-color: rgb(0, 128, 255);
 
     width: 50%;
     height: inherit;
@@ -72,7 +72,7 @@ h3 {
     margin: 5px auto 0;
 }
 
-.register .content {
+.login .content {
     background-color: rgb(202, 202, 202);
 
     width: 50%;
@@ -102,22 +102,11 @@ h3 {
     flex-direction: column;
 }
 
-form input {
+form input, button {
     width: 80%;
-    height: 40px;
+    height: 55px;
     display: block;
-    margin: 5px auto 5px;
-    border: none;
-    border-radius: 10px;
-    text-indent: 8px;
-    font-size: 15px;
-}
-
-form .submit {
-    width: 80%;
-    height: 40px;
-    display: block;
-    margin: 5px auto 5px;
+    margin: 10px auto 10px;
     border: none;
     border-radius: 10px;
     text-indent: 8px;
@@ -133,7 +122,7 @@ form input:focus {
     outline: none;
 }
 
-form .submit[type="submit"] {
+form button[type="submit"] {
     background-color: #00b536;
     font-size: 20px;
     text-transform: uppercase;
@@ -142,34 +131,34 @@ form .submit[type="submit"] {
     font-weight: bold;
 }
 
-form .submit[type="submit"]:hover {
+form button[type="submit"]:hover {
     background-color: #00d23f;
 }
 
-form .submit[type="submit"]:active {
+form button[type="submit"]:active {
     background-color: #ee2800;
 }
 
-.content .exist_account {
+.content .not_account {
     text-align: center;
 }
 
-.exist_account a {
+.not_account a {
     text-decoration: none;
 }
 
-.exist_account a:hover {
+.not_account a:hover {
     color:rgb(0, 140, 255);
 }
 
-.register .close_register {
+.login .close_login {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
 }
 
-.close_register img {
+.close_login img {
     width: 20px;
     height: 20px;
 }
