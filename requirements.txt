@@ -1,0 +1,12 @@
+Django
+numpy
+pandas
+scipy
+certifi
+django-markdown
+Pillow
+matplotlib
+pymysql
+mysqlclient
+scikit_learn
+sklearn
