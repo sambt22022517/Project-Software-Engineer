@@ -51,7 +51,7 @@ urlpatterns = [
     path('', views.index, name="mainpage"),
     path('admin/', admin.site.urls),
     path('shop/', include('shop.urls')),
-    path('blog/', include('blog.urls')),
+    #path('blog/', include('blog.urls')),
     path('about/', views.about, name="about"),
     path('shop/', include(('shop.urls', 'shop'), namespace='shop')),  # Sửa thành path
     path('profiles/', include('profiles.urls')),

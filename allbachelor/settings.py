@@ -34,7 +34,7 @@ STATICFILES_DIRS =[
 
 INSTALLED_APPS = [
     'shop.apps.ShopConfig',
-    'blog',
+    #'blog',
     # 'shop'
     'allbachelor',
     'django.contrib.admin',
@@ -51,17 +51,17 @@ INSTALLED_APPS = [
     'profiles',
     # 'social_django',
     'order',
-    'tfidf',
+    #'tfidf',
 
 ]
-AUTHENTICATION_BACKENDS = [
-    'social_core.backends.google.GoogleOAuth2',
-    'social_core.backends.open_id.OpenIdAuth',  # for Google authentication
-    'social_core.backends.google.GoogleOpenId',  # for Google authentication
-    'social_core.backends.google.GoogleOAuth2',  # for Google authentication
-    'django.contrib.auth.backends.ModelBackend'
-]
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# AUTHENTICATION_BACKENDS = [
+#     'social_core.backends.google.GoogleOAuth2',
+#     'social_core.backends.open_id.OpenIdAuth',  # for Google authentication
+#     'social_core.backends.google.GoogleOpenId',  # for Google authentication
+#     'social_core.backends.google.GoogleOAuth2',  # for Google authentication
+#     'django.contrib.auth.backends.ModelBackend'
+# ]
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -146,7 +146,7 @@ USE_TZ = True
 
 USE_I18N = True
 
-USE_L10N = True
+#USE_L10N = True
 
 
 
@@ -157,6 +157,7 @@ USE_L10N = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'shophome'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # SOCIAL_AUTH_URL_NAMESPACE = 'users:social'
 # SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '911875216013-m2t2lkpavpfaqmfk9ije51la0vgpd7ck.apps.googleusercontent.com'
 # SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'fLmXYRvv-pdbHzWDEl7KIL9a'
