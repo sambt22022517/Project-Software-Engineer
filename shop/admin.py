@@ -8,15 +8,15 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 
-admin.site.register(Category, CategoryAdmin)
-
+#admin.site.register(Category, CategoryAdmin)
+admin.site.register(Category)
 
 class SubCategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug']
     prepopulated_fields = {'slug': ('name',)}
 
 
-admin.site.register(SubCategory, SubCategoryAdmin)
+admin.site.register(SubCategory)
 
 
 # class ProductAdmin(admin.ModelAdmin):
@@ -33,7 +33,7 @@ class SliderAdmin(admin.ModelAdmin):
     list_display = ['name', 'image', 'description']
 
 
-admin.site.register(Slider, SliderAdmin)
+admin.site.register(Slider)
 
 
 # for recommendation part
@@ -50,7 +50,7 @@ class ClusterAdmin(admin.ModelAdmin):
     list_display = ['name', 'get_members']
 
 
-admin.site.register(Review, ReviewAdmin)
-admin.site.register(Cluster, ClusterAdmin)
+admin.site.register(Review)
+admin.site.register(Cluster)
 
 

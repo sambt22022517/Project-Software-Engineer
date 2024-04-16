@@ -156,7 +156,7 @@ USE_I18N = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = 'shophome'
+#LOGIN_REDIRECT_URL = 'shophome'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # SOCIAL_AUTH_URL_NAMESPACE = 'users:social'
 # SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '911875216013-m2t2lkpavpfaqmfk9ije51la0vgpd7ck.apps.googleusercontent.com'
@@ -164,3 +164,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media/')
 MEDIA_URL= "/media/"
+LOGIN_REDIRECT_URL = '/shop'
+

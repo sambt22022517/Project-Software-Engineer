@@ -42,6 +42,8 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
     path('', views.index, name="mainpage"),
@@ -53,8 +55,9 @@ urlpatterns = [
     path('profiles/', include('profiles.urls')),
     path('markdownx/', include('markdownx.urls')),
     path('order/', include('order.urls')),
-    #path('tfidf/', include('tfidf.urls')),
+    path('tfidf/', include('tfidf.urls')),
     path('matrixfactorization/', include('matrixfactorization.urls')),
+
 ]
 
 if settings.DEBUG:

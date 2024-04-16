@@ -1,4 +1,4 @@
-{% load static from staticfiles %}
+{% load static  %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>AllBachelor- Shop</title>
+	<title>Shop</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -338,11 +338,11 @@
 
                         <li class="text-center border-right text-white"><a href="#" class="text-white">	<i class="fas fa-language mr-2"></i>भाषा परिवर्तन</a></li>
 						<li class="text-center border-right text-white">
-							<a href="/checkout" class="text-white"><i class="fas fa-truck mr-2"></i>Kathmandu Nepal</a>
+							<a href="/checkout" class="text-white"><i class="fas fa-truck mr-2"></i>Shipping</a>
 						</li>
 						<li class="text-center border-right text-white">
 							<a href="/order" class="text-white">
-								<i class="fas fa-phone mr-2"></i> Track My order</a></li>
+								<i class="fas fa-phone mr-2"></i> My order</a></li>
 						{% if request.user.is_authenticated %}
 						<li class="text-center border-right text-white">
 
@@ -382,7 +382,7 @@
 				<div class="col-md-3 logo_agile">
 					<h6 class="text-center">
 						<a href="index.html" class="font-weight-bold font-italic">
-							<img src="http://allbachelor.com/img/logo.png" alt=" " class="img-fluid" height="50px" width="50px">allbachelor-shop
+							<img src="http://allbachelor.com/img/logo.png" alt=" " class="img-fluid" height="50px" width="50px">Shop
 
 						</a>
 					</h6>
@@ -625,14 +625,14 @@
 						<a class="nav-link" href="{% url 'shop:user_recommendation_list' %}">Recommendation</a>
 						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="about.html">Trending</a>
+							<a class="nav-link" href="{% url 'shop:about' %}">Trending</a>
 						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="product.html">New Arrivals</a>
+							<a class="nav-link" href="{% url 'shop:product_list' %}">New Arrivals</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact Us</a>
+							<a class="nav-link" href="{% url 'shop:contact_us' %}">Contact Us</a>
 						</li>
 					</ul>
 				</div>

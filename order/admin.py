@@ -24,6 +24,6 @@ class OrderDetailAdmin(admin.ModelAdmin):
     readonly_fields = ('product', 'price', 'total')
 
 
-admin.site.register(Order, OrderAdmin)
-admin.site.register(ShopCart, ShopCartAdmin)
-admin.site.register(OrderDetail, OrderDetailAdmin)
+admin.site.register(Order)
+admin.site.register(ShopCart)
+admin.site.register(OrderDetail)

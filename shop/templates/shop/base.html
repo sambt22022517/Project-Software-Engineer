@@ -1,4 +1,4 @@
-{% load static from staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -334,12 +334,12 @@
 					<ul>
 
 
-                        <li class="text-center border-right text-white"><a href="#" class="text-white">	<i class="fas fa-language mr-2"></i>भाषा परिवर्तन</a></li>
+                        <li class="text-center border-right text-white"><a href="#" class="text-white">	<i class="fas fa-language mr-2"></i> the_Middles</a></li>
 						<li class="text-center border-right text-white">
-							<a href="/checkout" class="text-white"><i class="fas fa-truck mr-2"></i>Kathmandu Nepal</a>
+							<a href="/checkout" class="text-white"><i class="fas fa-truck mr-2"></i> bla bla</a>
 						</li>
 						<li class="text-center border-right text-white">
-							<a href="/order" class="text-white">
+							<a href="{% url order:checkout %}" class="text-white">
 								<i class="fas fa-phone mr-2"></i> Track My order</a></li>
 						{% if request.user.is_authenticated %}
 						<li class="text-center border-right text-white">
@@ -348,16 +348,16 @@
 								<i class="fa fa-user"></i> {{ request.user}} </a>
 						</li>
 						<li class="text-center  boarder-right text-white">
-							<a href="logout"  class="text-white">
+							<a href="{% url shop:'logout' %}"  class="text-white">
 								<i class="fas fa-sign-out-alt mr-2"></i>Log out </a>
 						</li>
 						{% else %}
 						<li class="text-center border-right text-white">
-							<a href="login"  class="text-white">
+							<a href="{% url shop:'login' %}"  class="text-white">
 								<i class="fas fa-sign-in-alt mr-2"></i> Sign in </a>
 						</li>
 						<li class="text-center  boarder-right text-white">
-							<a href="signup"  class="text-white">
+							<a href="{% url shop:'signup' %}"  class="text-white">
 								<i class="fas fa-sign-out-alt mr-2"></i>Sign up</a>
 						</li>
 					{% endif %}
@@ -379,7 +379,7 @@
 				<!-- logo -->
 				<div class="col-md-3 logo_agile">
 					<h6 class="text-center">
-						<a href="index.html" class="font-weight-bold font-italic">
+						<a href="{% url  shop:index %}" class="font-weight-bold font-italic">
 							<img src="http://allbachelor.com/img/logo.png" alt=" " class="img-fluid" height="50px" width="50px">allbachelor-shop
 
 						</a>
@@ -403,7 +403,7 @@
 						<div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
 							<div class="wthreecartaits wthreecartaits2 cart cart box_1">
                                       <span class="qty" style="color:white">{{request.session.cart_items}}</span>
-									<a href="/order/shopcart"><button class="btn w3view-cart" type="submit" name="submit" value="">
+									<a href="{ url order:shopcart %}"><button class="btn w3view-cart" type="submit" name="submit" value="">
 										<i class="fas fa-cart-arrow-down"></i>
 									</button>
 									</a>
@@ -554,9 +554,9 @@
 									<h5 class="mb-3">TV, Appliances, Electronics</h5>
 									<div class="row">
 										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
+											<ul class="multi-column-dropdown">  
 												<li>
-													<a href="product2.html">Televisions</a>
+													<a href="{% url 'shop:product_list_by_category' category_slug='televisions' %}">Televisions</a>
 												</li>
 												<li>
 													<a href="product2.html">Home Entertainment Systems</a>
@@ -621,18 +621,18 @@
 						</li>
 
 						<li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="{% url 'shop:user_recommendation_list' %}">Recommendation</a>
-						</li>
-						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="about.html">Trending</a>
-						</li>
-						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="product.html">New Arrivals</a>
-						</li>
-
-						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact Us</a>
-						</li>
+							<a class="nav-link" href="{% url 'shop:user_recommendation_list' %}">Recommendation</a>
+							</li>
+							<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+								<a class="nav-link" href="{% url 'shop:about' %}">Trending</a>
+							</li>
+							<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+								<a class="nav-link" href="{% url 'shop:product_list' %}">New Arrivals</a>
+							</li>
+	
+							<li class="nav-item">
+								<a class="nav-link" href="">Contact Us</a>
+							</li>
 					</ul>
 				</div>
 			</nav>
@@ -648,3 +648,6 @@
 </div>
 </body>
 </html>
+
+
+
