@@ -32,10 +32,6 @@ Including another URLconf
 #     path('order/', include('order.urls')),
 #     path('tfidf/', include('tfidf.urls')),
 #     path('matrixfactorization/', include('matrixfactorization.urls')),
-
-
-
-
 # ]
 # if settings.DEBUG:
 #     urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

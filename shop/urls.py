@@ -49,7 +49,7 @@ urlpatterns = [
     path('logout/', views.user_logout, name="logout"),
     path('about/', views.about, name="about"),
     path('', include('django.contrib.auth.urls')),
-    path('oauth/', include('social_django.urls', namespace="social")),
+    #path('oauth/', include('social_django.urls', namespace="social")),
     path('product_list/', views.product_list_category, name="list"),
     path('index/', views.index, name="shophome"),
     path('', views.index, name='product_list'),
