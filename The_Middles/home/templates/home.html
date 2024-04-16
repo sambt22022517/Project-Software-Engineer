@@ -6,12 +6,15 @@
         <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Middles</title>
         <link rel="stylesheet" href="{% static 'css/home.css' %}">
-        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
     </head>
 
     <body>
+        <a href="/"><img src="{% static 'img/name.png' %}" alt="logo" class="img-logo" width="100px"></a>
+        <div>
+            <a class="home" href="/"><button type="button">Trang chủ</button></a>
+            <a class="home" href="/"><button type="button">Danh mục</button></a>
+            <a class="home" href="/"><button type="button">Liên hệ</button></a>
+        </div>
         <h1>The Middles</h1>
         <p>This is the home page</p>
         {% for product in products %}
