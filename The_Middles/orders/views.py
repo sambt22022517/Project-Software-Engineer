@@ -7,5 +7,7 @@ from django.template import loader
 
 def test(request):
     template = loader.get_template('cart/gio-hang-da-dang-nhap.html')
-    context = {}
+    context = {
+        'lst' : range(10)
+    }
     return HttpResponse(template.render(context, request))

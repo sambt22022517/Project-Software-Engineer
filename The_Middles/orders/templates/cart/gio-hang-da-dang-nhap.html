@@ -185,95 +185,101 @@
             </div>
           </div>
           <div class="gio-hang-da-dang-nhap-container27">
-            <div class="gio-hang-da-dang-nhap-khung-san-pham">
-              <div class="gio-hang-da-dang-nhap-container28">
-                <div class="gio-hang-da-dang-nhap-container29">
-                  <input type="checkbox" checked="true" class="gio-hang-da-dang-nhap-checkbox-chon-sp"
-                  />
-                </div>
-                <div class="gio-hang-da-dang-nhap-container30">
-                  <div class="gio-hang-da-dang-nhap-container31">
-                    <a href="http://linksp" target="_blank" rel="noreferrer noopener" class="gio-hang-da-dang-nhap-link8">
-                      <img alt="anh-san-pham" src="https://play.teleporthq.io/static/svg/default-img.svg"
-                      class="gio-hang-da-dang-nhap-image4" />
-                    </a>
+
+<!-- Đây là phần sẽ hiển thị nội dung của từng sản phẩm trong giỏ hàng -->
+            {% for x in lst %}
+              <div class="gio-hang-da-dang-nhap-khung-san-pham">
+                <div class="gio-hang-da-dang-nhap-container28">
+                  <div class="gio-hang-da-dang-nhap-container29">
+                    <input type="checkbox" checked="true" class="gio-hang-da-dang-nhap-checkbox-chon-sp"
+                    />
                   </div>
-                  <div class="gio-hang-da-dang-nhap-container32">
-                    <div class="gio-hang-da-dang-nhap-container33">
-                      <span class="gio-hang-da-dang-nhap-text20">
-                        <span>
-                          đây là một review sản phẩm rất là dài. Tại sao lại dài thì tôi sẽ giải
-                          tích rất là ngắn gọn. Đầu tiên chúng ta sẽ đi tìm hiểu tại sao bình luận
-                          lại dài. Tuy nhiên để tìm hiểu bình luận dài....
+                  <div class="gio-hang-da-dang-nhap-container30">
+                    <div class="gio-hang-da-dang-nhap-container31">
+                      <a href="http://linksp" target="_blank" rel="noreferrer noopener" class="gio-hang-da-dang-nhap-link8">
+                        <img alt="anh-san-pham" src="https://play.teleporthq.io/static/svg/default-img.svg"
+                        class="gio-hang-da-dang-nhap-image4" />
+                      </a>
+                    </div>
+                    <div class="gio-hang-da-dang-nhap-container32">
+                      <div class="gio-hang-da-dang-nhap-container33">
+                        <span class="gio-hang-da-dang-nhap-text20">
+                          <span>
+                            đây là một review sản phẩm rất là dài. Tại sao lại dài thì tôi sẽ giải
+                            tích rất là ngắn gọn. Đầu tiên chúng ta sẽ đi tìm hiểu tại sao bình luận
+                            lại dài. Tuy nhiên để tìm hiểu bình luận dài....
+                          </span>
+                          <br />
                         </span>
-                        <br />
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="gio-hang-da-dang-nhap-container34">
-                <div class="gio-hang-da-dang-nhap-container-don-gia">
-                  <span class="gio-hang-da-dang-nhap-text23">
-                    <span>
-                      10.000.000.000.000.000.000.000đ
-                    </span>
-                    <br />
-                  </span>
-                </div>
-                <div class="gio-hang-da-dang-nhap-container-sl">
-                  <button type="button" class="gio-hang-da-dang-nhap-button-giam-sl button">
-                    <span>
+                <div class="gio-hang-da-dang-nhap-container34">
+                  <div class="gio-hang-da-dang-nhap-container-don-gia">
+                    <span class="gio-hang-da-dang-nhap-text23">
                       <span>
-                        -
+                        10.000.000.000.000.000.000.000đ
                       </span>
                       <br />
                     </span>
-                  </button>
-                  <input type="text" placeholder="1" class="gio-hang-da-dang-nhap-input-sl input"
-                  />
-                  <button type="button" class="gio-hang-da-dang-nhap-button-tang-sl button">
-                    <span>
+                  </div>
+                  <div class="gio-hang-da-dang-nhap-container-sl">
+                    <button type="button" class="gio-hang-da-dang-nhap-button-giam-sl button">
                       <span>
-                        +
+                        <span>
+                          -
+                        </span>
+                        <br />
+                      </span>
+                    </button>
+                    <input type="text" placeholder="1" class="gio-hang-da-dang-nhap-input-sl input"
+                    />
+                    <button type="button" class="gio-hang-da-dang-nhap-button-tang-sl button">
+                      <span>
+                        <span>
+                          +
+                        </span>
+                        <br />
+                      </span>
+                    </button>
+                  </div>
+                  <div class="gio-hang-da-dang-nhap-container-so-tien">
+                    <span class="gio-hang-da-dang-nhap-text32">
+                      <span>
+                        1 Jack
                       </span>
                       <br />
                     </span>
-                  </button>
-                </div>
-                <div class="gio-hang-da-dang-nhap-container-so-tien">
-                  <span class="gio-hang-da-dang-nhap-text32">
-                    <span>
-                      1 Jack
-                    </span>
-                    <br />
-                  </span>
-                </div>
-                <div class="gio-hang-da-dang-nhap-container-thao-tac">
-                  <select class="gio-hang-da-dang-nhap-select">
-                    <option value="Option 1">
-                      Option 1
-                    </option>
-                    <option value="Option 1">
-                      Option 1
-                    </option>
-                    <option value="Option 2">
-                      Option 2
-                    </option>
-                    <option value="Option 2">
-                      Option 2
-                    </option>
-                    <option value="Option 3">
-                      Option 3
-                    </option>
-                    <option value="Option 3">
-                      Option 3
-                    </option>
-                  </select>
+                  </div>
+                  <div class="gio-hang-da-dang-nhap-container-thao-tac">
+                    <select class="gio-hang-da-dang-nhap-select">
+                      <option value="Option 1">
+                        Option 1
+                      </option>
+                      <option value="Option 1">
+                        Option 1
+                      </option>
+                      <option value="Option 2">
+                        Option 2
+                      </option>
+                      <option value="Option 2">
+                        Option 2
+                      </option>
+                      <option value="Option 3">
+                        Option 3
+                      </option>
+                      <option value="Option 3">
+                        Option 3
+                      </option>
+                    </select>
+                  </div>
                 </div>
               </div>
-            </div>
+            {% endfor %}
+<!-- kết thúc phần hiển thị nội dung của từng sản phẩm trong giỏ hàng -->
           </div>
+
           <div class="gio-hang-da-dang-nhap-container35">
             <div class="gio-hang-da-dang-nhap-container36">
               <div class="gio-hang-da-dang-nhap-container37">

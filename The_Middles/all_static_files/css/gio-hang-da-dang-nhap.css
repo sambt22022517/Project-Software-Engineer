@@ -960,12 +960,14 @@
   margin: auto;
   display: flex;
   position: absolute;
+  /*  */
   overflow-y: scroll;
-  align-items: flex-start;
+  /*  */
+  align-items: center;
   padding-left: 1%;
   padding-right: 1%;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: rgb(255, 251, 213);
 }
 .gio-hang-da-dang-nhap-khung-san-pham {
