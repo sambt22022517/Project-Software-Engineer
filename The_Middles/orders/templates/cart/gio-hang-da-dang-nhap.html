@@ -150,8 +150,12 @@
               <div class="gio-hang-da-dang-nhap-container17">
                 <div class="gio-hang-da-dang-nhap-container18">
                   <div class="gio-hang-da-dang-nhap-container19">
-                    <input type="checkbox" checked="true" class="gio-hang-da-dang-nhap-checkbox"
+
+<!--Checkbox chọn tất cả  -->
+                    <input type="checkbox" checked="false" class="gio-hang-da-dang-nhap-checkbox"
                     />
+<!--Checkbox chọn tất cả  -->       
+
                   </div>
                   <div class="gio-hang-da-dang-nhap-container20">
                     <span class="gio-hang-da-dang-nhap-text13">
@@ -196,7 +200,7 @@
               <div class="gio-hang-da-dang-nhap-khung-san-pham">
                 <div class="gio-hang-da-dang-nhap-container28">
                   <div class="gio-hang-da-dang-nhap-container29">
-                    <input type="checkbox" checked="true" class="gio-hang-da-dang-nhap-checkbox-chon-sp"
+                    <input type="checkbox" checked="false" class="gio-hang-da-dang-nhap-checkbox-chon-sp"
                     />
                   </div>
                   <div class="gio-hang-da-dang-nhap-container30">
@@ -237,7 +241,7 @@
                       </span>
                     </button>
 <!-- input số lượng sản phẩm -->
-                    <input type="text" placeholder="1" class="gio-hang-da-dang-nhap-input-sl input"
+                    <input type="text" class="gio-hang-da-dang-nhap-input-sl input" value="1" title="Bất kể bạn nhập gì từ bàn phím, chúng tôi sẽ lọc số, dấu cộng, trừ để tính toán dùm cho bạn"
                     />
 <!-- input số lượng sản phẩm -->
                     <button type="button" class="gio-hang-da-dang-nhap-button-tang-sl button">
@@ -303,9 +307,13 @@
 
               </div>
               <div class="gio-hang-da-dang-nhap-container40">
+
+<!-- button checkout -->
                 <button type="button" class="gio-hang-da-dang-nhap-button-mua-hang button">
                   Mua hàng
                 </button>
+<!-- button checkout -->
+
               </div>
             </div>
           </div>
@@ -425,6 +433,9 @@
         </div>
       </div>
     </div>
+
+<!-- file js -->
+    <script src = "{% static 'js/gio-hang-da-dang-nhap.js' %}"></script>
   </body>
 
 </html>

@@ -11,6 +11,7 @@ def test(request):
     # các biến có trong file gio-hang-da-dang-nhap.html được liệt kê hết ở đây
     context = {
         'lst' : range(10),
+        'checked':'false',
         'content_review_product': 'This is review',
         'unit_price': '1',
         'total_price': '10',

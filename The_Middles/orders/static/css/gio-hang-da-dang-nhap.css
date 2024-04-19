@@ -1236,3 +1236,9 @@
   height: 240px;
   object-fit: cover;
 }
+/* thêm mới */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
