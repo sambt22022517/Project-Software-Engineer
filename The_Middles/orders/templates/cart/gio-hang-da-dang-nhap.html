@@ -98,9 +98,11 @@
               <div class="gio-hang-da-dang-nhap-container11">
                 <img alt="avatar-nguoi-dung" src="https://play.teleporthq.io/static/svg/default-img.svg"
                 class="gio-hang-da-dang-nhap-image2" />
+<!-- Làm việc với tên người dùng ở đây -->
                 <span class="gio-hang-da-dang-nhap-text03">
                   Tên người dùng Nguyễn Văn A
                 </span>
+<!-- Làm việc với tên người dùng ở đây -->
               </div>
             </a>
           </div>
@@ -127,9 +129,12 @@
           <div class="gio-hang-da-dang-nhap-container13">
           </div>
           <div class="gio-hang-da-dang-nhap-container14">
+<!-- làm việc với đầu vào phần tìm kiếm -->
             <input type="text" placeholder="Tìm kiếm" class="gio-hang-da-dang-nhap-textinput input"
             />
+
             <button type="button" class="gio-hang-da-dang-nhap-button button">
+<!-- làm việc với đầu vào phần tìm kiếm -->
               <span>
                 <span>
                   Xong
@@ -205,9 +210,7 @@
                       <div class="gio-hang-da-dang-nhap-container33">
                         <span class="gio-hang-da-dang-nhap-text20">
                           <span>
-                            đây là một review sản phẩm rất là dài. Tại sao lại dài thì tôi sẽ giải
-                            tích rất là ngắn gọn. Đầu tiên chúng ta sẽ đi tìm hiểu tại sao bình luận
-                            lại dài. Tuy nhiên để tìm hiểu bình luận dài....
+                            {{content_review_product}}
                           </span>
                           <br />
                         </span>
@@ -219,7 +222,7 @@
                   <div class="gio-hang-da-dang-nhap-container-don-gia">
                     <span class="gio-hang-da-dang-nhap-text23">
                       <span>
-                        10.000.000.000.000.000.000.000đ
+                        {{unit_price}}
                       </span>
                       <br />
                     </span>
@@ -233,8 +236,10 @@
                         <br />
                       </span>
                     </button>
+<!-- input số lượng sản phẩm -->
                     <input type="text" placeholder="1" class="gio-hang-da-dang-nhap-input-sl input"
                     />
+<!-- input số lượng sản phẩm -->
                     <button type="button" class="gio-hang-da-dang-nhap-button-tang-sl button">
                       <span>
                         <span>
@@ -247,7 +252,7 @@
                   <div class="gio-hang-da-dang-nhap-container-so-tien">
                     <span class="gio-hang-da-dang-nhap-text32">
                       <span>
-                        1 Jack
+                        {{total_price}}
                       </span>
                       <br />
                     </span>
@@ -289,9 +294,13 @@
             </div>
             <div class="gio-hang-da-dang-nhap-container39">
               <div class="gio-hang-da-dang-nhap-container-tong-sotien">
+
+<!-- Làm việc với tổng số sản phẩm và tổng số tiền ở đây -->
                 <span>
-                  Tổng số tiền (x sản phẩm): 1 datvilla
+                  Tổng số tiền ({{total_product}} sản phẩm): {{total_checkout}}
                 </span>
+<!-- Làm việc với tổng số sản phẩm và tổng số tiền ở đây -->
+
               </div>
               <div class="gio-hang-da-dang-nhap-container40">
                 <button type="button" class="gio-hang-da-dang-nhap-button-mua-hang button">

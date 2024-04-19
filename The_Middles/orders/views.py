@@ -7,7 +7,14 @@ from django.template import loader
 
 def test(request):
     template = loader.get_template('cart/gio-hang-da-dang-nhap.html')
+
+    # các biến có trong file gio-hang-da-dang-nhap.html được liệt kê hết ở đây
     context = {
-        'lst' : range(10)
+        'lst' : range(10),
+        'content_review_product': 'This is review',
+        'unit_price': '1',
+        'total_price': '10',
+        'total_product': '10',
+        'total_checkout': '1 tỷ',
     }
     return HttpResponse(template.render(context, request))
