@@ -6,6 +6,9 @@ const click_button_checkout = document.getElementsByClassName("gio-hang-da-dang-
 const click_button_increase_quantity = document.getElementsByClassName("gio-hang-da-dang-nhap-button-tang-sl button"); //có thể có nhiều phần tử
 const click_button_decrease_quantity = document.getElementsByClassName("gio-hang-da-dang-nhap-button-giam-sl button"); //có thể có nhiều phần tử
 const input_quantity = document.getElementsByClassName("gio-hang-da-dang-nhap-input-sl input"); // có thể có nhiều phần tử
+
+const container_sls = document.querySelectorAll(".gio-hang-da-dang-nhap-container-sl")
+
 // khống chế đầu vào input từ bàn phím không thể < 0
 Array.from(input_quantity).forEach(element => {
     element.addEventListener("keydown", function(event) {
@@ -62,32 +65,27 @@ Array.from(input_quantity).forEach(element => {
     });
 });
 
-
-
-// nhấn button + sẽ tự động tăng giá trị của input_quantity
-Array.from(click_button_increase_quantity).forEach(element => {
-    element.addEventListener('click', function(event) {
-        // lấy phần tử cha của button +
-        var parent_button_increase = element.parentNode;
-        // lấy phần tử input sl
-        var sub_input_quantity = parent_button_increase.getElementsByClassName("gio-hang-da-dang-nhap-input-sl input");
-        // tăng số lượng lên 1
-        value = parseInt(sub_input_quantity.value) + 1;
-        sub_input_quantity.value = value;
-        console.log("đã thực hiện nhấn button + sẽ tự động tăng giá trị của input_quantity")
+container_sls.forEach(function(container_sl) {
+    // Lấy input và button trong từng khối A
+    var input = container_sl.querySelector('.gio-hang-da-dang-nhap-input-sl');
+    var button_increase = container_sl.querySelector('.gio-hang-da-dang-nhap-button-tang-sl');
+    var button_decrease = container_sl.querySelector('.gio-hang-da-dang-nhap-button-giam-sl');
+    
+    // Thêm sự kiện click cho button
+    button_increase.addEventListener('click', function() {
+        // Tăng giá trị của input
+        
+        input.value = parseInt(input.value) + 1;
+        
     });
-});
-
-// nhấn button - sẽ tự động giảm giá trị của input_quantity
-Array.from(click_button_decrease_quantity).forEach(element => {
-    element.addEventListener('click', function(event) {
-        // lấy phần tử cha của button +
-        var parent_button_increase = element.parentNode;
-        // lấy phần tử input sl
-        var sub_input_quantity = parent_button_increase.getElementsByClassName("gio-hang-da-dang-nhap-input-sl input");
-        // giảm số lượng đi 1
-        sub_input_quantity.value -= 1;
+    
+    button_decrease.addEventListener('click', function() {
+        // Tăng giá trị của input
+        
+        input.value = parseInt(input.value) - 1;
+        
     });
+
 });
 
 // 
