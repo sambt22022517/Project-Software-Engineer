@@ -19,3 +19,9 @@ def test(request):
         'total_checkout': '1 tỷ',
     }
     return HttpResponse(template.render(context, request))
+def test_gio_hang_trong(request):
+    template = loader.get_template('cart/gio-hang-trong.html')
+    context = {
+        
+    }
+    return HttpResponse(template.render(context, request))
