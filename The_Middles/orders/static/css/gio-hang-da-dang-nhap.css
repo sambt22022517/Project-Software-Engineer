@@ -1097,6 +1097,10 @@
   text-align: center;
   border-width: 1px;
   border-radius: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
 }
 .gio-hang-da-dang-nhap-button-tang-sl {
   width: 25px;
