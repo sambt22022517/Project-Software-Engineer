@@ -1097,6 +1097,10 @@
   text-align: center;
   border-width: 1px;
   border-radius: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
 }
 .gio-hang-da-dang-nhap-button-tang-sl {
   width: 25px;
@@ -1233,6 +1237,12 @@
 }
 .gio-hang-da-dang-nhap-image5 {
   width: 270px;
-  height: 240px;
+  height: 270px;
   object-fit: cover;
+}
+/* thêm mới */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

@@ -151,3 +151,5 @@ close_notice_not_selected_product.addEventListener('click', function(event){
     not_selected_product.style.display = "none";
 });
 
+
+
