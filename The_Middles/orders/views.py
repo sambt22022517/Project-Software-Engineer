@@ -22,6 +22,12 @@ def test(request):
 def test_gio_hang_trong(request):
     template = loader.get_template('cart/gio-hang-trong.html')
     context = {
+
+    }
+    return HttpResponse(template.render(context, request))
+def test_gio_hang_chua_dang_nhap(request):
+    template = loader.get_template('cart/gio-hang-chua-dang-nhap.html')
+    context = {
         
     }
     return HttpResponse(template.render(context, request))
