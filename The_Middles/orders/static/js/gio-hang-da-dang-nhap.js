@@ -1,6 +1,7 @@
 console.log("đã gọi file javascript");
-const select_all_product = document.getElementsByClassName("gio-hang-da-dang-nhap-checkbox"); // chỉ có 1 phần tử
-const select_each_product = document.getElementsByClassName("gio-hang-da-dang-nhap-checkbox-chon-sp"); //có thể có nhiều phần tử
+const select_all_product = document.querySelector(".gio-hang-da-dang-nhap-checkbox"); // chỉ có 1 phần tử
+const select_each_product = document.querySelectorAll(".gio-hang-da-dang-nhap-checkbox-chon-sp"); //có thể có nhiều phần tử
+
 const click_button_search = document.getElementsByClassName("gio-hang-da-dang-nhap-button button"); //chỉ có 1 phần tử
 const click_button_checkout = document.getElementsByClassName("gio-hang-da-dang-nhap-button-mua-hang button"); //chỉ có 1 phần tử 
 const click_button_increase_quantity = document.getElementsByClassName("gio-hang-da-dang-nhap-button-tang-sl button"); //có thể có nhiều phần tử
@@ -87,6 +88,7 @@ Array.from(input_quantity).forEach(element => {
     });
 });
 
+// button + - , tăng giảm giá trị input
 container_sls.forEach(function(container_sl) {
     // Lấy input và button trong từng khối A
     var input = container_sl.querySelector('.gio-hang-da-dang-nhap-input-sl');
@@ -111,4 +113,17 @@ container_sls.forEach(function(container_sl) {
 
 });
 
-// 
+// select all
+select_all_product.addEventListener('change', function(event){
+    var isChecked = event.target.checked;
+    console.log('select all được nhấn');
+    if (isChecked){
+        select_each_product.forEach(element => {
+            element.checked = true
+        })
+    }else{
+        select_each_product.forEach(element => {
+            element.checked = false
+        })
+    }
+});
