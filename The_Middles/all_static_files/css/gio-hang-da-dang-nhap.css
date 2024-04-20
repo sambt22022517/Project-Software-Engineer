@@ -558,13 +558,13 @@
   overflow: auto;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .gio-hang-da-dang-nhap-container {
       width: 1800px; /* Cố định giá trị width khi kích thước chiều ngang trình duyệt nhỏ hơn hoặc bằng 1200px */
   }
 }
 
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1401px) {
   .gio-hang-da-dang-nhap-container {
       width: auto; /* Đặt giá trị width thành auto khi kích thước chiều ngang trình duyệt lớn hơn 1200px */
   }
@@ -965,16 +965,10 @@
   text-align: center;
 }
 .gio-hang-da-dang-nhap-container27 {
-  top: 0px;
   flex: 0 0 auto;
-  left: 0px;
-  right: 0px;
   width: 80%;
-  bottom: 0px;
   height: 57%;
-  margin: auto;
   display: flex;
-  position: absolute;
   /*  */
   overflow-y: scroll;
   /*  */
