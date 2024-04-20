@@ -10,7 +10,7 @@ const click_button_increase_quantity = document.getElementsByClassName("gio-hang
 const click_button_decrease_quantity = document.getElementsByClassName("gio-hang-da-dang-nhap-button-giam-sl button"); //có thể có nhiều phần tử
 const input_quantity = document.getElementsByClassName("gio-hang-da-dang-nhap-input-sl input"); // có thể có nhiều phần tử
 
-const container_sls = document.querySelectorAll(".gio-hang-da-dang-nhap-container-sl")
+const container_quantity = document.querySelectorAll(".gio-hang-da-dang-nhap-container-sl")
 
 
 // các hàm được định nghĩa ở đây
@@ -91,7 +91,7 @@ Array.from(input_quantity).forEach(element => {
 });
 
 // button + - , tăng giảm giá trị input
-container_sls.forEach(function(container_sl) {
+container_quantity.forEach(function(container_sl) {
     // Lấy input và button trong từng khối A
     var input = container_sl.querySelector('.gio-hang-da-dang-nhap-input-sl');
     var button_increase = container_sl.querySelector('.gio-hang-da-dang-nhap-button-tang-sl');
@@ -147,9 +147,13 @@ click_button_checkout.addEventListener('click', function(event){
 })
 
 // đóng thông báo chưa chọn sp
+
+// đóng thông báo chưa chọn sp
 close_notice_not_selected_product.addEventListener('click', function(event){
     not_selected_product.style.display = "none";
 });
 
-
+// document.addEventListener('click', function(event){
+//     not_selected_product.style.display = "none";
+// });
 
