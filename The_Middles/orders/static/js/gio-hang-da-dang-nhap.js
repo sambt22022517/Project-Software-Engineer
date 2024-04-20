@@ -9,59 +9,81 @@ const input_quantity = document.getElementsByClassName("gio-hang-da-dang-nhap-in
 
 const container_sls = document.querySelectorAll(".gio-hang-da-dang-nhap-container-sl")
 
-// khống chế đầu vào input từ bàn phím không thể < 0
+
+// các hàm được định nghĩa ở đây
+function compute_expression(element, event){
+
+    // check sự kiện có phù hợp với hàm
+    var valid = false;
+    if (event.type === "blur"){
+        valid = true;
+    }
+
+    if (event.type === "keydown"){
+        if (event.key === "Enter"){
+            valid = true;
+        }
+    }
+
+    if (valid){
+        // Chuỗi biểu thức toán học
+        // Giai đoạn 1: lọc số, dấu +,-
+        var oldexpression = element.value;
+        var expression = '';
+        for (var i = 0; i < oldexpression.length; i++){
+            if ((oldexpression[i] >= '0' && oldexpression[i] <= '9') || oldexpression[i] == '+' || oldexpression[i] == '-'){
+                expression += oldexpression[i];
+            }
+        }
+
+        // Giai đoạn 2: tính toán
+        // Phân tích chuỗi thành mảng các số và toán tử
+        var tokens = expression.split(/([+-])/).map(function(token) {
+            return token.trim();
+        });
+
+        console.log(tokens)
+
+        var current_operator = 0;
+        var result = 0;
+        for(var i = 0; i < tokens.length; i++){
+            if(tokens[i] === '-'){
+                current_operator += 1;
+
+            }else if(tokens[i] === '+'){
+                
+            }
+            else if (tokens[i] != ''){
+                
+                if (current_operator === 1){
+                    result -= parseInt(tokens[i]);
+                }else{
+                    result += parseInt(tokens[i]);
+                }
+                current_operator = 0;
+            }
+            if (current_operator === 2){
+                current_operator = 0;
+            }
+        }
+        // console.log('Kết quả: ' + result);
+        
+        // Nếu giá trị nhỏ hơn 0, đặt lại giá trị thành 0
+        result = result >= 0 ? result : 0;
+
+        element.value = result;
+
+        element.blur();
+    }
+}
+
+// khống chế đầu vào input từ bàn phím không thể < 0, tính toán giá trị biểu thức.
 Array.from(input_quantity).forEach(element => {
     element.addEventListener("keydown", function(event) {
-        if (event.key === "Enter"){
-            // Chuỗi biểu thức toán học
-            // Giai đoạn 1: lọc số, dấu +,-
-            var oldexpression = element.value;
-            var expression = '';
-            for (var i = 0; i < oldexpression.length; i++){
-                if ((oldexpression[i] >= '0' && oldexpression[i] <= '9') || oldexpression[i] == '+' || oldexpression[i] == '-'){
-                    expression += oldexpression[i];
-                }
-            }
-
-            // Giai đoạn 2: tính toán
-            // Phân tích chuỗi thành mảng các số và toán tử
-            var tokens = expression.split(/([+-])/).map(function(token) {
-                return token.trim();
-            });
-
-            console.log(tokens)
-
-            var current_operator = 0;
-            var result = 0;
-            for(var i = 0; i < tokens.length; i++){
-                if(tokens[i] === '-'){
-                    current_operator += 1;
-
-                }else if(tokens[i] === '+'){
-                    
-                }
-                else if (tokens[i] != ''){
-                    
-                    if (current_operator === 1){
-                        result -= parseInt(tokens[i]);
-                    }else{
-                        result += parseInt(tokens[i]);
-                    }
-                    current_operator = 0;
-                }
-                if (current_operator === 2){
-                    current_operator = 0;
-                }
-            }
-            // console.log('Kết quả: ' + result);
-            
-            // Nếu giá trị nhỏ hơn 0, đặt lại giá trị thành 0
-            if (result < 0) {
-                result = 0;
-            }
-
-            element.value = result;
-        }
+        compute_expression(element, event);
+    });
+    element.addEventListener("blur", function(event) {
+        compute_expression(element, event);
     });
 });
 
@@ -82,8 +104,9 @@ container_sls.forEach(function(container_sl) {
     button_decrease.addEventListener('click', function() {
         // Tăng giá trị của input
         
-        input.value = parseInt(input.value) - 1;
+        newvalue = parseInt(input.value) - 1
         
+        input.value = newvalue >= 0 ? newvalue : 0
     });
 
 });
