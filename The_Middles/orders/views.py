@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from django.shortcuts import redirect
 
 def test(request):
     template = loader.get_template('cart/gio-hang-da-dang-nhap.html')
@@ -31,3 +32,5 @@ def test_gio_hang_chua_dang_nhap(request):
         
     }
     return HttpResponse(template.render(context, request))
+def get_commingsoon(request):
+    return redirect('commingsoon: test_commingsoon')
