@@ -1,3 +1,4 @@
+
 .hoi-thanh-toan-container {
   width: 100%;
   height: 400px;
@@ -549,12 +550,26 @@
 }
 
 .gio-hang-da-dang-nhap-container {
-  width: 100%;
+  width: 1800px;
   display: flex;
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
+  overflow: auto;
 }
+
+@media screen and (max-width: 1200px) {
+  .gio-hang-da-dang-nhap-container {
+      width: 1800px; /* Cố định giá trị width khi kích thước chiều ngang trình duyệt nhỏ hơn hoặc bằng 1200px */
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .gio-hang-da-dang-nhap-container {
+      width: auto; /* Đặt giá trị width thành auto khi kích thước chiều ngang trình duyệt lớn hơn 1200px */
+  }
+}
+
 .gio-hang-da-dang-nhap-thanh-dieu-huong {
   width: 100%;
   height: 40px;
