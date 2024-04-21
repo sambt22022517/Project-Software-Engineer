@@ -25,3 +25,11 @@ The_Middle\
     |---wsgi.py
 |---manage.py
 ```
+http://127.0.0.1:8000/gio-hang-da-dang-nhap/
+![alt text](<image/Screenshot 2024-04-21 220008.png>)
+http://127.0.0.1:8000/gio-hang-chua-dang-nhap/
+![alt text](image/image.png)
+http://127.0.0.1:8000/gio-hang-trong/
+![alt text](image.png)
+http://127.0.0.1:8000/thanh-toan/
+![alt text](<Screenshot 2024-04-21 220617.png>)
