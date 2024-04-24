@@ -38,7 +38,8 @@ class Category(models.Model):
 class SubCategory(models.Model):
     name = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, db_index=True, unique=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    #category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='subcategory/', blank=True)
 
     class Meta:
         db_table = 'subcategory'
@@ -123,7 +124,7 @@ class Review(models.Model):
         (5, '5'),
     )
     product = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField('ngày tạo')
     user_name = models.CharField(max_length=100)
     comment = models.CharField(max_length=200)
     rating = models.IntegerField(choices=RATING_CHOICES)

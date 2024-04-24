@@ -15,6 +15,7 @@ from order.models import ShopCartForm
 from .forms import ReviewForm
 from .suggestions import update_clusters
 from .models import Category, Product, SubCategory, Slider, Review, Cluster
+from profiles.models import Profile
 
 
 def signup(request):
@@ -23,17 +24,40 @@ def signup(request):
         if request.POST['password'] == request.POST['repeatpassword']:
             try:
                 user = User.objects.get(username=request.POST['username'])
-                return render(request, 'Register.html', {'error': "User already exist"})
+                return render(request, 'Register.html', {'error': " Tài khoản đã tồn tại "})
             except User.DoesNotExist:
                 user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'],
                                                 email=request.POST['email'])
+                
+                # Tạo Profile mới
+                email = request.POST['email']
+                username = request.POST['username']
+                profile = Profile.objects.create(user=user, first_name=username,email=email)  # Tạo profile cho người dùng mới
 
                 return redirect("shop:index")
         else:
-            return render(request, 'Register.html', {'error': "Password Don't match"})
+            return render(request, 'Register.html', {'error': " Mật khẩu không khớp "})
 
     else:
         return render(request, 'Register.html')
+
+# def signup(request):
+#     if request.method == "POST":
+#         # creating a user
+#         if request.POST['password'] == request.POST['repeatpassword']:
+#             try:
+#                 user = User.objects.get(username=request.POST['username'])
+#                 return render(request, 'Register.html', {'error': "User already exist"})
+#             except User.DoesNotExist:
+#                 user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'],
+#                                                 email=request.POST['email'])
+
+#                 return redirect("shop:index")
+#         else:
+#             return render(request, 'Register.html', {'error': "Password Don't match"})
+
+#     else:
+#         return render(request, 'Register.html')
 
 
 def user_login(request):
@@ -43,10 +67,10 @@ def user_login(request):
         user = auth.authenticate(username=uname, password=pwd)
         if user is not None:
             auth.login(request, user)
-            return render(request, 'index.html', {'error': "Invalid Login credential"})
+            return render(request, 'index.html', {'error': "Invalid Login"})
 
         else:
-            return render(request, 'login.html', {'error': "Invalid Login credential"})
+            return render(request, 'login.html', {'error': "Invalid Login"})
     else:
         return render(request, 'login.html')
 
@@ -60,7 +84,8 @@ def index(request, category_slug=None):
     category = None
     categories = Category.objects.all()
     slider = Slider.objects.all()
-    electronics = SubCategory.objects.filter(Q(category_id=1))
+    #electronics = SubCategory.objects.filter(Q(category_id=1))
+    electronics = {}
     products = Product.objects.filter(available=True).order_by('-created')
     paginator = Paginator(products, 3)
     page = request.GET.get('page')
@@ -95,10 +120,10 @@ def product_list_category(request, category_slug=None):
     categories = Category.objects.all()
     product_list = Product.objects.order_by('-name')
     products = Product.objects.filter(available=True)
-    if category_slug:
-        category = get_object_or_404(Category, slug=category_slug)
-        print(category)
-        products = products.filter(category=category)
+    # if category_slug:
+    #     category = get_object_or_404(Category, slug=category_slug)
+    #     print(category)
+    #     products = products.filter(category=category)
     return render(request, 'list.html', {'category': category,
                                               'categories': categories,
                                               'products': products,

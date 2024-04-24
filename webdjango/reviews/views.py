@@ -1,8 +1,7 @@
 from django.shortcuts import get_object_or_404, render
-from .models import Review, Wine
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from .models import Review, Wine,Cluster
+from .models import Review,Wine ,Cluster
 from django.contrib.auth.models import User
 from .forms import ReviewForm
 from .suggestions import update_clusters
@@ -14,38 +13,38 @@ from django.contrib.auth.decorators import login_required
 def review_list(request):
     latest_review_list = Review.objects.order_by('-pub_date')[:9]
     context = {'latest_review_list':latest_review_list}
-    return render(request, 'reviews/review_list.html', context)
+    return render(request, 'review_list.html', context)
 
 
 def review_detail(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
-    return render(request, 'reviews/review_detail.html', {'review': review})
+    return render(request, 'review_detail.html', {'review': review})
 
 
 def wine_list(request):
     wine_list = Wine.objects.order_by('-name')
     context = {'wine_list':wine_list}
-    return render(request, 'reviews/wine_list.html', context)
+    return render(request, 'wine_list.html', context)
 
 
 def wine_detail(request, wine_id):
     wine = get_object_or_404(Wine, pk=wine_id)
     form = ReviewForm()
-    return render(request, 'reviews/wine_detail.html', {'wine': wine, 'form': form})
+    return render(request, 'wine_detail.html', {'wine': wine, 'form': form})
 
 @login_required
 def add_review(request, wine_id):
     wine = get_object_or_404(Wine, pk=wine_id)
     form = ReviewForm(request.POST)
     if form.is_valid():
-        rating = form.cleaned_data['rating']
-        comment = form.cleaned_data['comment']
-        user_name = request.user.username
+        #rating = form.cleaned_data['rating']
+        #comment = form.cleaned_data['comment']
+        #user_name = request.user.username
         review = Review()
         review.wine = wine
-        review.user_name = user_name
-        review.rating = rating
-        review.comment = comment
+        review.user_name = request.user.username
+        review.rating = form.cleaned_data['rating']
+        review.comment = form.cleaned_data['comment']
         review.pub_date = datetime.datetime.now()
         review.save()
         update_clusters()
@@ -54,7 +53,7 @@ def add_review(request, wine_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('reviews:wine_detail', args=(wine.id,)))
 
-    return render(request, 'reviews/wine_detail.html', {'wine': wine, 'form': form})
+    return render(request, 'wine_detail.html', {'wine': wine, 'form': form})
 
 
 def user_review_list(request, username=None):
@@ -62,7 +61,7 @@ def user_review_list(request, username=None):
         username = request.user.username
     latest_review_list = Review.objects.filter(user_name=username).order_by('-pub_date')
     context = {'latest_review_list':latest_review_list, 'username':username}
-    return render(request, 'reviews/user_review_list.html', context)
+    return render(request, 'user_review_list.html', context)
 
 
 @login_required
@@ -102,6 +101,6 @@ def user_recommendation_list(request):
 
     return render(
         request,
-        'reviews/user_recommendation_list.html',
+        'user_recommendation_list.html',
         {'username': request.user.username,'wine_list': wine_list}
 )
