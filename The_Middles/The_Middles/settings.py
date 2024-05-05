@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
     'rest_framework',
     'corsheaders',
     'customers',
@@ -130,6 +131,10 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR /'global_static_files',
 ]
+
+MEDIA_URL = 'img/'
+
+MEDIA_ROOT = BASE_DIR / 'all_static_files/img'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Default primary key field type
