@@ -32,12 +32,18 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'users.apps.UsersConfig',
+    'crispy_forms',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'rest_framework',
+    'corsheaders',
+    'customers',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'The_Middles.urls'
@@ -120,17 +128,18 @@ USE_TZ = True
 STATIC_ROOT = BASE_DIR / 'all_static_files'
 
 STATIC_URL = 'static/'
-
-#Add this in your settings.py file:
 STATICFILES_DIRS = [
-    BASE_DIR / 'global_static_files'
+    BASE_DIR /'global_static_files',
 ]
 
 MEDIA_URL = 'img/'
 
 MEDIA_ROOT = BASE_DIR / 'all_static_files/img'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_ALLOW_ALL = True
