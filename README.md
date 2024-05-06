@@ -25,6 +25,7 @@ The_Middle\
     |---wsgi.py
 |---manage.py
 ```
+### Các trang web sẽ xuất hiện
 http://127.0.0.1:8000/gio-hang-da-dang-nhap/
 ![alt text](<image/Screenshot 2024-04-21 220008.png>)
 http://127.0.0.1:8000/gio-hang-chua-dang-nhap/

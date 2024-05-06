@@ -11,6 +11,7 @@ const confirm_change_location = document.querySelector(".thay-doi-dia-chi-button
 const adjust_location = document.querySelector(".them-dia-chi-moi-capnhat-container");
 const confirm_adjust_location = document.querySelector(".them-dia-chi-moi-capnhat-button1");
 const refuse_adjust_location = document.querySelector(".them-dia-chi-moi-capnhat-button");
+const add_new_address = document.querySelector(".thay-doi-dia-chi-button1");
 
 confirmation.addEventListener('click', function(event){
     ispayment.style.display = "flex";
@@ -55,6 +56,9 @@ refuse_adjust_location.addEventListener('click', function(event){
     adjust_location.style.display = "none";
 });
 
+add_new_address.addEventListener('click', function(event){
+    adjust_location.style.display = "flex";
+});
 
 
 
