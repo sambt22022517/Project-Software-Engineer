@@ -115,19 +115,7 @@ def about(request, category_slug=None):
                                           'products': products})
 
 
-def product_list_category(request, category_slug=None):
-    category = None
-    categories = Category.objects.all()
-    product_list = Product.objects.order_by('-name')
-    products = Product.objects.filter(available=True)
-    # if category_slug:
-    #     category = get_object_or_404(Category, slug=category_slug)
-    #     print(category)
-    #     products = products.filter(category=category)
-    return render(request, 'list.html', {'category': category,
-                                              'categories': categories,
-                                              'products': products,
-                                              'product_list': product_list})
+
 
 
 def search_list(request):
