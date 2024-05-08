@@ -65,7 +65,7 @@ ROOT_URLCONF = 'The_Middles.urls'
 
 TEMPLATES = [
     {
-        'THE_MIDDLES': 'django.template.backends.django.DjangoTemplates',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['all_static_files'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -133,6 +133,9 @@ STATICFILES_DIRS = [
     BASE_DIR /'global_static_files',
 ]
 
+# Cầu hình media file
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Default primary key field type
@@ -143,3 +146,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_ALLOW_ALL = True
 
 LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
