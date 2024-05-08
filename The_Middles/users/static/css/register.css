@@ -18,7 +18,7 @@ body {
     padding: 0;
 }
 
-.sign_up {
+.register {
     position: relative;
     min-width: 700px;
     max-width: 50%;
@@ -26,7 +26,7 @@ body {
     margin: 100px auto;
 }
 
-.sign_up .welcome {
+.register .welcome {
     background-color: rgb(255, 0, 166);
 
     width: 50%;
@@ -72,7 +72,7 @@ h3 {
     margin: 5px auto 0;
 }
 
-.sign_up .content {
+.register .content {
     background-color: rgb(202, 202, 202);
 
     width: 50%;
@@ -162,14 +162,14 @@ form .submit[type="submit"]:active {
     color:rgb(0, 140, 255);
 }
 
-.sign_up .close_sign_up {
+.register .close_register {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
 }
 
-.close_sign_up img {
+.close_register img {
     width: 20px;
     height: 20px;
 }
