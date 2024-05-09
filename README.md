@@ -26,7 +26,7 @@ The_Middle\
 |---manage.py
 ```
 
-## Cách chạy thử demo sign-up-in
+## Cách chạy thử
 **Lưu ý rằng phải thực hiện công việc trong phần Trước khi làm việc.**
 - Mở cmd tại folder chứa file `manage.py`.
 - Copy `python manage.py runserver` vào cmd và Enter.
@@ -40,7 +40,16 @@ Django version 5.0.3, using settings 'The_Middles.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 ```
-- Phương thức trải nghiệm:
+
+## Cách chạy thử demo Trang chủ và Danh mục sản phẩm
+  + Nhập đường link http://127.0.0.1:8000/ để trải nghiệm chức năng trang chủ.
+  + Nhập đường link http://127.0.0.1:8000/danh-muc-san-pham/tat-ca để trải nghiệm chức năng danh mục sản phẩm với tất cả danh mục.
+  + Nhập đường link http://127.0.0.1:8000/danh-muc-san-pham/name để trải nghiệm chức năng danh mục sản phẩm với danh mục name.
+    Trong đó, name = {dien-tu, sach, mon-an, ve-phim, meo, quan-ao}
+  + Sử dụng các đường link trực tiếp trên trang web để chuyển từ trang này sang trang khác cũng được.
+
+## Cách chạy thử demo sign-up-in
   + Nhập đường link http://127.0.0.1:8000/login để trải nghiệm chức năng đăng nhập.
   + Nhập đường link http://127.0.0.1:8000/register để trải nghiệm chức năng đăng ký.
   + Sử dụng các đường link trực tiếp trên trang web để chuyển từ trang này sang trang khác cũng được.
+
