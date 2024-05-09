@@ -21,7 +21,9 @@ from customers import views
 from users import views as user_views
 from django.urls import path, include
 from django.conf.urls.static import static
+# from django.conf.urls import url
 from django.conf import settings
+from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,6 +33,8 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name = 'users/logout.html'), name = 'logout'),
     path('register', user_views.register, name='register'),
     path('', include('home.urls')),
+    re_path(r'^img/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
+    re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
