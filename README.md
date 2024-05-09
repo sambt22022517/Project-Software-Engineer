@@ -16,3 +16,10 @@ B1 : bật command line trong thư mục The-Midels/backend
 B2 : chạy lệnh : python manage.py runserver
 B3 : bật command line trong thư mục The-Midels/frontend
 B4 : chạy lệnh : npm start 
+# Sản phẩm : Web thương mại điện tử The Middles
+
+### Thành viên nhóm:
+- 22022517 Bùi Tiến Sâm
+- 22022521 Nguyễn Văn Mạnh
+- 22022597 Trịnh Đắc Phú
+- 22022654 Triệu Vũ Hoàn
