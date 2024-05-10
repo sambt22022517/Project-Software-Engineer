@@ -22,7 +22,7 @@ def sendEmail(request, order):
 
 def payments(request):
     try:
-        if request.is_ajax() and request.method == 'POST':
+        if  request.method == 'POST':
             data = request.POST
             order_id = data['orderID']
             trans_id = data['transID']
@@ -39,6 +39,8 @@ def payments(request):
                 amount_paid=order.order_total,
                 status=status,
             )
+            print('hello')
+            print(order)
             payment.save()
 
             order.payment = payment
@@ -69,11 +71,11 @@ def payments(request):
                 product.stock -= item.quantity
                 product.save()
 
-            # Xóa hết cart_item
+            # # Xóa hết cart_item
             CartItem.objects.filter(user=request.user).delete()
 
             # Gửi thư cảm ơn
-            sendEmail(request=request, order=order)
+            # sendEmail(request=request, order=order)
 
             # Phản hồi lại ajax
             data = {
