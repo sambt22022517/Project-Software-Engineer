@@ -267,13 +267,21 @@
               <div class="cart-container19"><span>Thành tiền</span></div>
             </div>
             {% endif %}
-            {% if user.id is not None%}
+            {% if user.id is not None %}
             <div class="cart-container20">
             {% else %}
-            <div class="cart-container20" style="overflow-y: hidden;">
+
+            <div class="cart-container20" 
+            style="
+            overflow-y: hidden;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            ">
+
             {% endif %}
               <!-- each product -->
-              
+              {% if user.id is not None %}
               {% for cart_item in cart_items %}
               <div class="cart-container21">
                 <!-- ảnh tên sp -->
@@ -357,11 +365,18 @@
               </div>
               <div class="pad"></div>
               {% endfor %}
+              {% else %}
+
+              <strong>Đăng nhập hoặc đăng kí để hưởng những ưu đãi siêu khủng!</strong>
+
+              {% endif %}
+              
               <!-- end each product -->
 
             </div>
           </div>
           <div class="cart-container30">
+            {% if user.id is not None %}
             <div class="cart-container31">
               <div class="cart-container32">
                 <div class="cart-container33"><span>Tổng :</span></div>
@@ -408,6 +423,13 @@
 
               </div>
             </div>
+            {% else %}
+            <div style="height: 50%; width: 75%; align-items: center; justify-content: center; flex-direction: row;">
+              <span style="font-style: italic;">Có thể bạn chưa biết: </span>
+              <strong style="scroll-behavior: smooth;
+              scroll-snap-type: x mandatory;">Con gà có trước quả trứng</strong>
+            </div>
+            {% endif %}
           </div>
         </div>
       </div>
