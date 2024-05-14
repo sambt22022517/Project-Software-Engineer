@@ -722,4 +722,11 @@
     height: 100%;
     text-decoration: none;
   }
+  .home-chua-dang-nhap-link {
+    height: 50%;
+    padding-top: var(--dl-space-space-unit);
+    padding-left: var(--dl-space-space-halfunit);
+    padding-right: var(--dl-space-space-halfunit);
+    padding-bottom: var(--dl-space-space-unit);
+  }
   

@@ -215,6 +215,7 @@
 
             <!-- đăng xuất -->
             <div class="cart-container12">
+              {% if user.id is not None %}
               <a
                 href="{% url 'logout' %}"
                 target="_blank"
@@ -223,6 +224,24 @@
               >
                 Đăng xuất
               </a>
+              {% else %}
+              <a
+                href="{% url 'login' %}"
+                target="_self"
+                rel="noreferrer noopener"
+                class="home-chua-dang-nhap-link"
+              >
+                Log in
+              </a>
+              <a
+                href="{% url 'register' %}"
+                target="_self"
+                rel="noreferrer noopener"
+                class="home-chua-dang-nhap-link"
+              >
+                Sign in
+              </a>
+              {% endif %}
               <img
                 alt="image"
                 src="https://play.teleporthq.io/static/svg/default-img.svg"
