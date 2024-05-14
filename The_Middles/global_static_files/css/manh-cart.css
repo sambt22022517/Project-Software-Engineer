@@ -706,6 +706,7 @@
     box-shadow: 5px 5px 10px 0px #d4d4d4;
     border-width: 0px;
     background-color: var(--dl-color-theme-primary1);
+    text-align: center;
   }
   .cart-button3 {
     width: 60%;
@@ -713,6 +714,7 @@
     border-width: 0px;
     border-radius: var(--dl-radius-radius-radius4);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
   }
 
   .cart-link-button{
