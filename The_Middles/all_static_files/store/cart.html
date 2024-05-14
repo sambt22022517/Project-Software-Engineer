@@ -259,7 +259,7 @@
         </div>
         <div class="cart-container13">
           <div class="cart-container14">
-            {% if user.id is not None %}
+            {% if user.id is not None and cart_items %}
             <div class="cart-container15">
               <div class="cart-container16"><span>Sản phẩm</span></div>
               <div class="cart-container17"><span>Số lượng</span></div>
@@ -267,7 +267,7 @@
               <div class="cart-container19"><span>Thành tiền</span></div>
             </div>
             {% endif %}
-            {% if user.id is not None %}
+            {% if user.id is not None and cart_items%}
             <div class="cart-container20">
             {% else %}
 
@@ -281,7 +281,7 @@
 
             {% endif %}
               <!-- each product -->
-              {% if user.id is not None %}
+              {% if user.id is not None and cart_items %}
               {% for cart_item in cart_items %}
               <div class="cart-container21">
                 <!-- ảnh tên sp -->
@@ -365,9 +365,11 @@
               </div>
               <div class="pad"></div>
               {% endfor %}
-              {% else %}
+              {% elif user.id is None %}
 
               <strong>Đăng nhập hoặc đăng kí để hưởng những ưu đãi siêu khủng!</strong>
+              {% else %}
+              <strong>Giỏ hàng trống!</strong>
 
               {% endif %}
               
