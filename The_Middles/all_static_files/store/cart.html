@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>cart - Good Natured Quiet Wasp</title>
+    <title>cart</title>
     <meta property="og:title" content="cart - Good Natured Quiet Wasp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -100,7 +100,7 @@
                 instagram
               </a>
               <div class="cart-container04">
-                <span>Chào mừng bạn đến với chúng tôi!</span>
+                <span>Chào mừng bạn {{ user.first_name }} đến với chúng tôi!</span>
               </div>
             </div>
             <div class="cart-container05">
@@ -192,23 +192,31 @@
               </div>
             </div>
 
+            <!-- click store -->
             <div class="cart-container10">
               <a href="{% url 'store' %}" class="cart-button button">Store</a>
             </div>
+            <!-- end click store -->
 
-            <div class="cart-container11">
-              <input
-                type="text"
-                placeholder="Search"
-                class="cart-textinput input"
-              />
-              <button type="button" class="cart-button1 button">
-                Tìm kiếm
-              </button>
-            </div>
+            <!-- Tìm kiếm -->
+            <form action="{% url 'search' %}" class="cart-container11" method="GET">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  class="cart-textinput input"
+                  name="q" value="{{ q }}"
+                />
+                <button type="submit" class="cart-button1 button">
+                  Tìm
+                </button>
+
+            </form>
+            <!-- end tìm kiếm -->
+
+            <!-- đăng xuất -->
             <div class="cart-container12">
               <a
-                href="https://example.com"
+                href="{% url 'logout' %}"
                 target="_blank"
                 rel="noreferrer noopener"
                 class="cart-link4"
@@ -219,8 +227,11 @@
                 alt="image"
                 src="https://play.teleporthq.io/static/svg/default-img.svg"
                 class="cart-image5"
+
               />
             </div>
+            <!-- end đăng xuất -->
+
           </div>
         </div>
         <div class="cart-container13">
@@ -232,109 +243,141 @@
               <div class="cart-container19"><span>Thành tiền</span></div>
             </div>
             <div class="cart-container20">
+              <!-- each product -->
+              
+              {% for cart_item in cart_items %}
               <div class="cart-container21">
+                <!-- ảnh tên sp -->
                 <div class="cart-container22">
                   <img
-                    alt="image"
-                    src="https://play.teleporthq.io/static/svg/default-img.svg"
+                    alt="product"
+                    src="{{ cart_item.product.images.url }}"
                     class="cart-image6"
                   />
                   <div class="cart-container23">
                     <div class="cart-container24">
-                      <span>Tên sản phẩm</span>
+                      <span>{{ cart_item.product.product_name }}</span>
                     </div>
                     <div class="cart-container25">
-                      <span>màu sắc: đen</span>
+                      <p class="text-muted small">
+												{% if cart_item.variations.all %}
+												{% for variation in cart_item.variations.all %}
+												{{ variation.variation_category | capfirst }}: {{ variation.variation_value }}
+												<br />
+												{% endfor %}
+												{% endif %}
+											</p>
                     </div>
                   </div>
                 </div>
+                <!-- end ảnh tên sp -->
+
                 <div class="cart-container26">
+                  <!-- giảm -->
                   <a
-                    href="https://example.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
+                    href="{% url 'remove_cart' cart_item.product.id cart_item.id %}"
+                    target="_self"
+                    type="button"
                     class="cart-link5"
                   >
                     <span>-</span>
                     <br />
                     <br />
                   </a>
+
+                  <!-- nhập số lượng vào -->
                   <input
                     type="text"
-                    placeholder="1"
                     class="cart-textinput1 input"
+                    value="{{ cart_item.quantity }}"
                   />
-                  <a
-                    href="https://example.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="cart-link6"
-                  >
-                    <span>+</span>
-                    <br />
-                    <br />
-                  </a>
+
+                  <!-- tăng -->
+                  <form action="{% url 'add_cart' cart_item.product.id %}" class="cart-link6" method="post">
+                    {% csrf_token %}
+                    {% for variation in cart_item.variations.all %}
+                    <input type="hidden" name="{{ variation.variation_category | lower }}"
+                      value="{{ variation.variation_value | capfirst }}">
+                    {% endfor %}
+                    <button class="sub-cart-link6" type="submit">
+                      +
+                    </button>
+                  </form>
+                  
+
                 </div>
                 <div class="cart-container27">
                   <span>
-                    <span>đơn giá</span>
+                    <span>${{ cart_item.product.price }}</span>
                     <br />
                   </span>
                 </div>
                 <div class="cart-container28">
                   <span>
-                    <span>Thành tiền</span>
+                    <span>${{ cart_item.sub_total }}</span>
                     <br />
                   </span>
                 </div>
                 <div class="cart-container29">
-                  <a
-                    href="https://example.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="cart-link7"
-                  >
-                    Loại bỏ
-                  </a>
+
+                  <a href="{% url 'remove_cart_item' cart_item.product.id cart_item.id %}"
+										class="cart-link7" onclick="return confirm('Are you sure?')">
+										Loại bỏ</a>
+
                 </div>
               </div>
+              <div class="pad"></div>
+              {% endfor %}
+              <!-- end each product -->
+
             </div>
           </div>
           <div class="cart-container30">
             <div class="cart-container31">
               <div class="cart-container32">
-                <div class="cart-container33"><span>Tổng tiền :</span></div>
+                <div class="cart-container33"><span>Tổng :</span></div>
                 <div class="cart-container34"><span>Thuế :</span></div>
-                <div class="cart-container35"><span>Tổng :</span></div>
+                <div class="cart-container35"><span>Tổng tiền :</span></div>
               </div>
               <div class="cart-container36">
                 <div class="cart-container37">
                   <span>
-                    <span>9$</span>
+                    <span>${{ total }}</span>
                     <br />
                   </span>
                 </div>
                 <div class="cart-container38">
                   <span>
-                    <span>$9</span>
+                    <span>${{ tax }}</span>
                     <br />
                   </span>
                 </div>
-                <div class="cart-container39"><span>$18</span></div>
+                <div class="cart-container39"><strong>${{ grand_total }}</strong></div>
               </div>
               <div class="cart-container40">
-                <button type="button" class="cart-button2 button">
-                  <span>
-                    <span>Thanh toán</span>
-                    <br />
-                  </span>
-                </button>
-                <button type="button" class="cart-button3 button">
-                  <span>
-                    <span>Mua tiếp</span>
-                    <br />
-                  </span>
-                </button>
+                
+                <div class="cart-button2 button">
+                  <a
+                    href="{% url 'checkout' %}"
+                    target="_self"
+                    rel="noreferrer noopener"
+                    class="cart-link-button"
+                  >Thanh toán</a>
+
+                </div>
+
+                <div class="pad"></div>
+
+                <div class="cart-button3 button">
+                  <a
+                    href="{% url 'store' %}"
+                    target="_self"
+                    rel="noreferrer noopener"
+                    class="cart-link-button"
+                  >Mua tiếp</a>
+
+                </div>
+
               </div>
             </div>
           </div>
