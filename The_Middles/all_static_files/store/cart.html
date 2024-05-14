@@ -100,7 +100,11 @@
                 instagram
               </a>
               <div class="cart-container04">
-                <span>Chào mừng bạn {{ user.first_name }} đến với chúng tôi!</span>
+                {% if user.id is not None %}
+                <span style="font-style: italic;">Chào mừng bạn {{ user.first_name }} đến với chúng tôi!</span>
+                {% else %}
+                <span style="font-style: italic;">Hãy tham gia để khám phá điều thú vị</span>
+                {% endif %}
               </div>
             </div>
             <div class="cart-container05">
@@ -231,7 +235,7 @@
                 rel="noreferrer noopener"
                 class="home-chua-dang-nhap-link"
               >
-                Log in
+                <strong>Log in</strong>
               </a>
               <a
                 href="{% url 'register' %}"
@@ -239,7 +243,7 @@
                 rel="noreferrer noopener"
                 class="home-chua-dang-nhap-link"
               >
-                Sign in
+                <strong>Sign in</strong>
               </a>
               {% endif %}
               <img
@@ -255,13 +259,19 @@
         </div>
         <div class="cart-container13">
           <div class="cart-container14">
+            {% if user.id is not None %}
             <div class="cart-container15">
               <div class="cart-container16"><span>Sản phẩm</span></div>
               <div class="cart-container17"><span>Số lượng</span></div>
               <div class="cart-container18"><span>Đơn giá</span></div>
               <div class="cart-container19"><span>Thành tiền</span></div>
             </div>
+            {% endif %}
+            {% if user.id is not None%}
             <div class="cart-container20">
+            {% else %}
+            <div class="cart-container20" style="overflow-y: hidden;">
+            {% endif %}
               <!-- each product -->
               
               {% for cart_item in cart_items %}
