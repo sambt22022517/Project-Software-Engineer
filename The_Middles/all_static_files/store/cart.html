@@ -222,7 +222,7 @@
               {% if user.id is not None %}
               <a
                 href="{% url 'logout' %}"
-                target="_blank"
+                target="_self"
                 rel="noreferrer noopener"
                 class="cart-link4"
               >
@@ -286,11 +286,14 @@
               <div class="cart-container21">
                 <!-- ảnh tên sp -->
                 <div class="cart-container22">
-                  <img
-                    alt="product"
-                    src="{{ cart_item.product.images.url }}"
-                    class="cart-image6"
-                  />
+                  <a href="{{ cart_item.product.get_url }}" class="cart-image6">
+                    <img
+                      alt="product"
+                      src="{{ cart_item.product.images.url }}"
+                      width="100%"
+                      height="100%"
+                    />
+                  </a>
                   <div class="cart-container23">
                     <div class="cart-container24">
                       <span>{{ cart_item.product.product_name }}</span>
@@ -317,7 +320,7 @@
                     type="button"
                     class="cart-link5"
                   >
-                    <span>-</span>
+                    <span class="minus">-</span>
                     <br />
                     <br />
                   </a>
