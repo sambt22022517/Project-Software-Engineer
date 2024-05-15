@@ -6,6 +6,17 @@
     align-items: center;
     flex-direction: column;
   }
+  @media screen and (max-width: 1400px) {
+    .cart-container {
+        width: 1400px; /* Cố định giá trị width khi kích thước chiều ngang trình duyệt nhỏ hơn hoặc bằng 1200px */
+    }
+  }
+  
+  @media screen and (min-width: 1401px) {
+    .cart-container {
+        width: auto; /* Đặt giá trị width thành auto khi kích thước chiều ngang trình duyệt lớn hơn 1200px */
+    }
+  }
   .cart-container01 {
     width: 100%;
     height: 39px;
@@ -29,12 +40,14 @@
     align-items: flex-start;
   }
   .cart-image {
-    width: 20px;
+    width: 25px;
     height: 100%;
     object-fit: cover;
     padding-top: var(--dl-space-space-halfunit);
     padding-left: 0px;
     padding-bottom: var(--dl-space-space-halfunit);
+    max-width: 100%;
+    max-height: 100%;
   }
   .cart-link {
     height: 100%;
@@ -43,8 +56,11 @@
     padding-right: var(--dl-space-space-unit);
     padding-bottom: var(--dl-space-space-halfunit);
   }
+  .link-nav:hover{
+    font-weight: bold;
+  }
   .cart-image1 {
-    width: 20px;
+    width: 25px;
     height: 100%;
     object-fit: cover;
     padding-top: var(--dl-space-space-halfunit);
@@ -74,7 +90,7 @@
     justify-content: flex-end;
   }
   .cart-image2 {
-    width: 20px;
+    width: 25px;
     height: 100%;
     object-fit: cover;
     padding-top: var(--dl-space-space-halfunit);
@@ -88,7 +104,7 @@
     padding-bottom: var(--dl-space-space-halfunit);
   }
   .cart-image3 {
-    width: 20px;
+    width: 25px;
     height: 100%;
     object-fit: cover;
     padding-top: var(--dl-space-space-halfunit);
@@ -125,12 +141,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    object-fit: cover;
   }
   .cart-image4 {
     width: 180px;
-    height: 50%;
+    height: 28px;
     object-fit: cover;
-    padding-right: var(--dl-space-space-oneandhalfunits);
+    /* padding-right: var(--dl-space-space-oneandhalfunits); */
   }
   .cart-container09 {
     flex: 0 0 auto;
@@ -364,9 +381,10 @@
     font-weight: bold;
   }
   .cart-image5 {
-    width: 50px;
-    height: 50%;
+    width: 40px;
+    height: 40px;
     object-fit: cover;
+    /* display: inline-block */
   }
   .cart-container13 {
     width: 100%;
@@ -765,3 +783,18 @@
     padding-bottom: var(--dl-space-space-unit);
   }
   
+  .badge {
+    position: relative; /*Đặt vị trí tuyệt đối cho phần tử chấm tròn */
+    bottom: 45px; /*Vị trí từ trên xuống*/
+    left: 30px; /*Vị trí từ phải sang*/
+    width: 20px; /* Kích thước chấm tròn */
+    height: 20px;
+    background-color: red; /* Màu sắc chấm tròn */
+    border-radius: 50%; /* Đặt hình dạng thành hình tròn */
+    display: flex; /* Hiển thị các thành phần bên trong theo chiều ngang */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    color: white; /* Màu chữ trong chấm tròn */
+    font-weight: bold; /* Độ đậm chữ */
+    display: none;
+}

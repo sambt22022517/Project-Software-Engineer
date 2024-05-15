@@ -73,64 +73,64 @@
           <div class="cart-container02">
             <div class="cart-container03">
               <img
-                alt="image"
-                src="https://play.teleporthq.io/static/svg/default-img.svg"
+                alt="facebook"
+                src="{% static './images/logo-facebook.png' %}"
                 class="cart-image"
               />
               <a
                 href="https://example.com"
                 target="_blank"
                 rel="noreferrer noopener"
-                class="cart-link"
+                class="cart-link link-nav"
               >
                 <span>facebook</span>
                 <br />
               </a>
               <img
-                alt="image"
-                src="https://play.teleporthq.io/static/svg/default-img.svg"
+                alt="instagram"
+                src="{% static './images/logo-instagram.png' %}"
                 class="cart-image1"
               />
               <a
                 href="https://example.com"
                 target="_blank"
                 rel="noreferrer noopener"
-                class="cart-link1"
+                class="cart-link1 link-nav"
               >
                 instagram
               </a>
               <div class="cart-container04">
                 {% if user.id is not None %}
-                <span style="font-style: italic;">Chào mừng bạn {{ user.first_name }} đến với chúng tôi!</span>
+                <span style="font-style: italic;" class="link-nav">Chào mừng bạn {{ user.first_name }} đến với chúng tôi!</span>
                 {% else %}
-                <span style="font-style: italic;">Hãy tham gia để khám phá điều thú vị</span>
+                <span style="font-style: italic;" class="link-nav">Hãy tham gia để khám phá điều thú vị</span>
                 {% endif %}
               </div>
             </div>
             <div class="cart-container05">
               <img
-                alt="image"
-                src="https://play.teleporthq.io/static/svg/default-img.svg"
+                alt="email"
+                src="{% static './images/logo-email.png' %}"
                 class="cart-image2"
               />
               <a
                 href="https://example.com"
                 target="_blank"
                 rel="noreferrer noopener"
-                class="cart-link2"
+                class="cart-link2 link-nav"
               >
                 Email
               </a>
               <img
                 alt="image"
-                src="https://play.teleporthq.io/static/svg/default-img.svg"
+                src="{% static './images/logo-telephone.png' %}"
                 class="cart-image3"
               />
               <a
                 href="https://example.com"
                 target="_blank"
                 rel="noreferrer noopener"
-                class="cart-link3"
+                class="cart-link3 link-nav"
               >
                 Call us
               </a>
@@ -139,13 +139,13 @@
         </div>
         <div class="cart-container06">
           <div class="cart-container07">
-            <div class="cart-container08">
+            <a href="{% url 'home' %}" target="_self" rel="noreferrer noopener" class="cart-container08">
               <img
-                alt="image"
-                src="https://play.teleporthq.io/static/svg/default-img.svg"
+                alt="logo"
+                src="{% static './images/name.png' %}"
                 class="cart-image4"
               />
-            </div>
+            </a>
             <div class="cart-container09">
               <div data-thq="thq-dropdown" class="cart-thq-dropdown list-item">
                 <div
@@ -198,7 +198,7 @@
 
             <!-- click store -->
             <div class="cart-container10">
-              <a href="{% url 'store' %}" class="cart-button button">Store</a>
+              <a href="{% url 'store' %}" class="cart-button button" style="text-align: center;">Store</a>
             </div>
             <!-- end click store -->
 
@@ -246,12 +246,20 @@
                 <strong>Sign in</strong>
               </a>
               {% endif %}
-              <img
-                alt="image"
-                src="https://play.teleporthq.io/static/svg/default-img.svg"
-                class="cart-image5"
-
-              />
+              <a
+                href="{% url 'cart' %}"
+                target="_self"
+                rel="noreferrer noopener"
+              >
+                <img
+                  alt="cart"
+                  src="{% static './images/cart.png' %}"
+                  class="cart-image5"
+                >
+                  <div class="badge">3</div>
+                </img>
+                <!-- <div class="badge">3</div> -->
+              </a>
             </div>
             <!-- end đăng xuất -->
 

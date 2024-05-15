@@ -6,6 +6,17 @@
     align-items: center;
     flex-direction: column;
   }
+  @media screen and (max-width: 1400px) {
+    .cart-container {
+        width: 1400px; /* Cố định giá trị width khi kích thước chiều ngang trình duyệt nhỏ hơn hoặc bằng 1200px */
+    }
+  }
+  
+  @media screen and (min-width: 1401px) {
+    .cart-container {
+        width: auto; /* Đặt giá trị width thành auto khi kích thước chiều ngang trình duyệt lớn hơn 1200px */
+    }
+  }
   .cart-container01 {
     width: 100%;
     height: 39px;
@@ -35,6 +46,8 @@
     padding-top: var(--dl-space-space-halfunit);
     padding-left: 0px;
     padding-bottom: var(--dl-space-space-halfunit);
+    max-width: 100%;
+    max-height: 100%;
   }
   .cart-link {
     height: 100%;
@@ -42,6 +55,9 @@
     padding-left: var(--dl-space-space-halfunit);
     padding-right: var(--dl-space-space-unit);
     padding-bottom: var(--dl-space-space-halfunit);
+  }
+  .link-nav:hover{
+    font-weight: bold;
   }
   .cart-image1 {
     width: 20px;
@@ -125,12 +141,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    object-fit: cover;
   }
   .cart-image4 {
     width: 180px;
-    height: 50%;
+    height: 28px;
     object-fit: cover;
-    padding-right: var(--dl-space-space-oneandhalfunits);
+    /* padding-right: var(--dl-space-space-oneandhalfunits); */
   }
   .cart-container09 {
     flex: 0 0 auto;
@@ -163,6 +180,11 @@
     border-top-right-radius: var(--dl-radius-radius-radius4);
     border-bottom-left-radius: var(--dl-radius-radius-radius4);
     border-bottom-right-radius: var(--dl-radius-radius-radius4);
+  }
+  .cart-dropdown-toggle:hover{
+    fill: var(--dl-color-theme-neutral-light);
+    color: var(--dl-color-theme-neutral-light);
+    background-color:var(--dl-color-theme-primary1);
   }
   .cart-text03 {
     font-size: 14px;
@@ -308,6 +330,11 @@
     width: 100%;
     border-color: var(--dl-color-theme-primary1);
   }
+  .cart-button:hover{
+    fill: var(--dl-color-theme-neutral-light);
+    color: var(--dl-color-theme-neutral-light);
+    background-color:var(--dl-color-theme-primary1);
+  }
   .cart-container11 {
     flex: 0 0 auto;
     width: 40%;
@@ -319,17 +346,21 @@
     justify-content: center;
   }
   .cart-textinput {
-    width: 60%;
+    width: 80%;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
   .cart-button1 {
     fill: var(--dl-color-theme-neutral-light);
     color: var(--dl-color-theme-neutral-light);
-    width: 40%;
+    width: 20%;
     background-color: var(--dl-color-theme-primary1);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    cursor: pointer;
+  }
+  .cart-button1:hover{
+    background-color:#e6840d;
   }
   .cart-container12 {
     flex: 0 0 auto;
@@ -346,9 +377,12 @@
     padding-right: var(--dl-space-space-unit);
     padding-bottom: var(--dl-space-space-unit);
   }
+  .cart-link4:hover{
+    font-weight: bold;
+  }
   .cart-image5 {
-    width: 50px;
-    height: 50%;
+    width: 40px;
+    height: 40px;
     object-fit: cover;
   }
   .cart-container13 {
@@ -521,6 +555,9 @@
     border-bottom-left-radius: 4;
     border-bottom-right-radius: 0;
   }
+  .cart-link5:hover{
+    font-weight: bold;
+  }
   .cart-textinput1 {
     width: 20%;
     height: 20px;
@@ -548,6 +585,10 @@
     width: 100%;
     height: 20px;
     text-align: center;
+    cursor: pointer;
+  }
+  .sub-cart-link6:hover{
+    font-weight: bold;
   }
 
   .cart-container27 {
@@ -583,7 +624,10 @@
     padding-top: var(--dl-space-space-halfunit);
     border-radius: var(--dl-radius-radius-radius4);
     padding-bottom: var(--dl-space-space-halfunit);
-    background-color: #e60d0d;
+    background-color: var(--dl-color-theme-primary1);
+  }
+  .cart-link7:hover{
+    background-color: #f90505;
   }
   .cart-container30 {
     width: 100%;
@@ -706,6 +750,10 @@
     box-shadow: 5px 5px 10px 0px #d4d4d4;
     border-width: 0px;
     background-color: var(--dl-color-theme-primary1);
+    text-align: center;
+  }
+  .cart-button2:hover{
+    background-color:#e6840d;
   }
   .cart-button3 {
     width: 60%;
@@ -713,11 +761,24 @@
     border-width: 0px;
     border-radius: var(--dl-radius-radius-radius4);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  .cart-button3:hover{
+    fill: var(--dl-color-theme-neutral-light);
+    color: var(--dl-color-theme-neutral-light);
+    background-color: var(--dl-color-theme-primary1);
   }
 
   .cart-link-button{
     width: 100%;
     height: 100%;
     text-decoration: none;
+  }
+  .home-chua-dang-nhap-link {
+    height: 50%;
+    padding-top: var(--dl-space-space-unit);
+    padding-left: var(--dl-space-space-halfunit);
+    padding-right: var(--dl-space-space-halfunit);
+    padding-bottom: var(--dl-space-space-unit);
   }
   
