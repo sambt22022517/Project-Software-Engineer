@@ -62,12 +62,12 @@
   <!-- end head -->
 
   <!-- start body -->
-
   <body>
     <link rel="stylesheet" href="{% static 'css/manh-style.css' %}" />
     <div>
       <link href="{% static 'css/manh-cart.css' %}" rel="stylesheet" />
 
+      <!-- bắt đầu toàn bộ -->
       <div class="cart-container">
         <div class="cart-container01">
           <div class="cart-container02">
@@ -265,6 +265,9 @@
 
           </div>
         </div>
+
+        <!-- kết thúc nav -->
+
         <div class="cart-container13">
           <div class="cart-container14">
             {% if user.id is not None and cart_items %}
