@@ -3,6 +3,7 @@
 
 {% block content %}
     <!-- start địa chỉ nhận hàng -->
+    {% if user.id is not None %}
     <form action="{% url 'place_order' %}" method="POST" style="width: 100%;">
     {% csrf_token %} 
     <div class="checkout-container14">
@@ -178,5 +179,11 @@
       </div>
     </form>
       <!-- end sản phẩm đã chọn -->
-
+    {% else %}
+        <div class="checkout-container14" style="align-items: center; justify-items: center;">
+            <h2>
+                Vui lòng đăng nhập để sử dụng chức năng thanh toán
+            </h2>
+        </div>
+    {% endif %}
 {% endblock %}
