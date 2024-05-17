@@ -10,6 +10,10 @@ from carts.models import Cart, CartItem
 from category.models import Category
 from carts.views import _cart_id
 
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+from .chatModel import response_AI
 
 def store(request, category_slug=None):
     if category_slug is not None:
@@ -51,11 +55,14 @@ def product_detail(request, category_slug, product_slug=None):
 
     reviews = ReviewRating.objects.filter(product_id=single_product.id, status=True)
 
+    ratings = ["5", "4.5", "4", "3.5", "3", "2.5", "2", "1.5", "1", "0.5"]
+
     context = {
         'single_product': single_product,
         'in_cart': in_cart if 'in_cart' in locals() else False,
         'orderproduct': orderproduct,
         'reviews': reviews,
+        'ratings': ratings
     }
     return render(request, 'store/product_detail.html', context=context)
 
@@ -95,3 +102,17 @@ def submit_review(request, product_id):
                 data.save()
                 messages.success(request, "Thank you! Your review has been submitted.")
                 return redirect(url)
+
+@csrf_exempt
+def submit_message(request, product_id):
+    if request.method == "POST":
+        try:
+            # Lưu tin nhắn vào cơ sở dữ liệu hoặc thực hiện các thao tác cần thiết
+            message = request.POST.get('message', None)
+            # Do something with the message
+            response = response_AI(message= message)
+            return JsonResponse({'success': True, 'message' : response})  # Trả về một phản hồi JSON thành công
+        except Exception as e:
+            return JsonResponse({'success': False, 'error': str(e)})  # Trả về một phản hồi JSON lỗi nếu có lỗi xảy ra
+    else:
+        return JsonResponse({'success': False, 'error': 'Invalid request'})  # Trả về một phản hồi JSON lỗi nếu yêu cầu không hợp lệ

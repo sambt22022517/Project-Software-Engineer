@@ -39,8 +39,6 @@ def payments(request):
                 amount_paid=order.order_total,
                 status=status,
             )
-            print('hello')
-            print(order)
             payment.save()
 
             order.payment = payment
