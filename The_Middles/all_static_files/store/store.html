@@ -109,7 +109,7 @@
 									</div>
 								</div>
 								<!-- form-row.// -->
-								<button class="btn btn-block btn-primary">Apply</button>
+								<button class="btn btn-block btn-warning">Apply</button>
 							</div>
 							<!-- card-body.// -->
 						</div>
@@ -142,7 +142,7 @@
 										<span class="price">${{ product.price }}</span>
 									</div>
 								</div>
-								<a href="{{ product.get_url }}" class="btn btn-block btn-primary">View detail</a>
+								<a href="{{ product.get_url }}" class="btn btn-block btn-warning">View detail</a>
 							</figcaption>
 						</figure>
 					</div>
@@ -153,7 +153,7 @@
 					<ul class="pagination">
 						{% if products.has_previous %}
 						<li class="page-item">
-							<a class="page-link" href="{% url 'store' %}?page=1">First</a>
+							<a class="btn-warning" href="{% url 'store' %}?page=1">First</a>
 						</li>
 						<li class="page-item">
 							<a class="page-link"
