@@ -65,7 +65,7 @@ ROOT_URLCONF = 'The_Middles.urls'
 
 TEMPLATES = [
     {
-        'THE_MIDDLES': 'django.template.backends.django.DjangoTemplates',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['all_static_files'],
         'APP_DIRS': True,
         'OPTIONS': {
