@@ -146,12 +146,12 @@
         <div class="cart-container02">
           <div class="cart-container03">
             <img alt="facebook" src="{% static './images/logo-facebook.png' %}" class="cart-image" />
-            <a href="https://example.com" target="_blank" rel="noreferrer noopener" class="cart-link link-nav">
+            <a href="https://example.com" target="_blank" rel="noreferrer noopener" class="cart-link link-nav m1">
               <span>facebook</span>
               <br />
             </a>
             <img alt="instagram" src="{% static './images/logo-instagram.png' %}" class="cart-image1" />
-            <a href="https://example.com" target="_blank" rel="noreferrer noopener" class="cart-link1 link-nav">
+            <a href="https://example.com" target="_blank" rel="noreferrer noopener" class="cart-link1 link-nav m1">
               instagram
             </a>
             <div class="cart-container04">
@@ -165,11 +165,11 @@
           </div>
           <div class="cart-container05">
             <img alt="email" src="{% static './images/logo-email.png' %}" class="cart-image2" />
-            <a href="https://example.com" target="_blank" rel="noreferrer noopener" class="cart-link2 link-nav">
+            <a href="https://example.com" target="_blank" rel="noreferrer noopener" class="cart-link2 link-nav m1">
               Email
             </a>
             <img alt="image" src="{% static './images/logo-telephone.png' %}" class="cart-image3" />
-            <a href="https://example.com" target="_blank" rel="noreferrer noopener" class="cart-link3 link-nav">
+            <a href="https://example.com" target="_blank" rel="noreferrer noopener" class="cart-link3 link-nav m1">
               Call us
             </a>
           </div>
@@ -198,7 +198,7 @@
 
                 <li data-thq="thq-dropdown" class="cart-dropdown list-item">
                   <div data-thq="thq-dropdown-toggle" class="cart-dropdown-toggle1">
-                    <a class="cart-text04" href="{% url 'store' %}">Tất cả</a>
+                    <a class="cart-text04 m" href="{% url 'store' %}">Tất cả</a>
                   </div>
                 </li>
 
@@ -206,7 +206,7 @@
 
                 <li data-thq="thq-dropdown" class="cart-dropdown1 list-item">
                   <div data-thq="thq-dropdown-toggle" class="cart-dropdown-toggle2">
-                    <a class="cart-text05" href="{{ category.get_url }}">{{ category.category_name }}</a>
+                    <a class="cart-text05 m" href="{{ category.get_url }}">{{ category.category_name }}</a>
                   </div>
                 </li>
 
@@ -238,19 +238,19 @@
           <!-- đăng xuất -->
           <div class="cart-container12">
             {% if user.id is not None %}
-            <a href="{% url 'logout' %}" target="_self" rel="noreferrer noopener" class="cart-link4">
+            <a href="{% url 'logout' %}" target="_self" rel="noreferrer noopener" class="cart-link4 m1">
               Đăng xuất
             </a>
             {% else %}
-            <a href="{% url 'login' %}" target="_self" rel="noreferrer noopener" class="home-chua-dang-nhap-link">
+            <a href="{% url 'login' %}" target="_self" rel="noreferrer noopener" class="home-chua-dang-nhap-link m1">
               <strong>Log in</strong>
             </a>
-            <a href="{% url 'register' %}" target="_self" rel="noreferrer noopener" class="home-chua-dang-nhap-link">
+            <a href="{% url 'register' %}" target="_self" rel="noreferrer noopener" class="home-chua-dang-nhap-link m1">
               <strong>Sign in</strong>
             </a>
             {% endif %}
             <a href="{% url 'cart' %}" target="_self" rel="noreferrer noopener">
-              <img alt="cart" src="{% static './images/cart.png' %}" class="cart-image5">
+              <img alt="cart" src="{% static './images/cart.png' %}" class="cart-image5 m">
               <div class="badge">3</div>
               </img>
               <!-- <div class="badge">3</div> -->
