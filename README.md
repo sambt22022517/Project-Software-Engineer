@@ -12,6 +12,16 @@
 - Video demo: [video](https://drive.google.com/file/d/10ZV4tXUm88zy8SAAzgruWQo2whQbslzL/view?usp=sharing)
 - Báo cáo: [báo cáo](https://drive.google.com/file/d/1oRyHPW_hGnAgQ1IaFqH2DBp2Pbvus4_6/view?usp=sharing)
 
+## Persona
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chị Nguyễn Phương Lan, 28 tuổi, là giáo viên dạy toán của một trường THCS tại địa bàn huyện Ninh Giang, Hải Dương. Chị đã có chồng và hai con nhỏ học tiểu học. Cả nhà hiện đang sinh sống tại xã Hưng Long, huyện Ninh Giang, tỉnh Hải Dương.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chị Lan tốt nghiệp bằng giỏi của trường Đại học Sư phạm Hà Nội, khoa Vật lý kỹ thuật năm 22 tuổi. Sau quá trình thực tập, chị được phân công công tác tại quê và trở thành giáo viên chính thức của trường.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chị Lan là người có tâm huyết với nghề, luôn mong muốn các em học sinh có được tiết học bổ ích thay vì chỉ học lý thuyết khô khan. Chị đã đề xuất với nhà trường về việc bổ sung trang thiết bị cho phòng thực hành vật lý, và được nhà trường bàn giao cho công việc đó cùng kinh phí thực hiện.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tuy nhiên, vì lịch dạy dày đặc cùng với việc có con nhỏ, chị Lan không có đủ thời gian để đi “rong ruổi” tìm kiếm những nơi có bán trang thiết bị thực hành vật lý. Vậy nên, chị đã sử dụng The Middles, trang web thương mại điện tử nổi tiếng, để thực hiện mục tiêu, nhờ vậy mà tiết kiệm được thời gian.
+
+## Scenarios
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chị Lan, sau khi lập ra danh sách những vật cần mua, đã sử dụng The Middles để thực hiện công việc. Nhưng, khi mua về, chị nhận ra mình đã bỏ sót những vật nhỏ nhặt liên quan, như là quả cầu sắt nhưng không có móc treo, hay lực kế mà không có quả cân,... Sau đó chị Lan đã lại lần nữa tìm và mua hàng.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sau lần quên đồ vừa rồi, chị đã phải suy nghĩ kỹ lưỡng hơn, đồng thời chị nghĩ rằng nếu web có thể có chức năng gợi ý những thứ liên quan đến những thứ chị đã xem thì có lẽ chị sẽ đỡ tốn công hơn nhiều.
+
 ## Mục tiêu chính
 - Thiết kế, phát triển và kiểm tra một ứng dụng web thương mại điện tử đầy đủ tính năng để xem, mua, đánh giá và đánh giá các sản phẩm khác nhau.
 - Xây dựng hệ thống gợi ý để đề xuất các sản phẩm khác nhau phục vụ cho từng người dùng.
