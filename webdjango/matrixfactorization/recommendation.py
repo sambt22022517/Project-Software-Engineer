@@ -130,13 +130,10 @@ class uuCF(object):
         for n in range(self.n_users):
             # row indices of ratings made by user n
             ids = np.where(users == n)[0].astype(np.int32)
-            # indices of all items rated by user n
-            # item_ids = self.Y_data[ids, 1]
-            # ratings made by user n
-            ratings = self.Y_data[ids, 2]
+            ratings = self.Y_data[ids, 3]
             # avoid zero division
             self.mu[n] = np.mean(ratings) if ids.size > 0 else 0
-            self.Ybar[ids, 2] = ratings - self.mu[n]
+            self.Ybar[ids, 3] = ratings - self.mu[n]
         # form the rating matrix as a sparse matrix.
         # see more: https://goo.gl/i2mmT2
         self.Ybar = sparse.coo_matrix(
