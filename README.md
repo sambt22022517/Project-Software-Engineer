@@ -1,7 +1,7 @@
 # Sản phẩm : Web thương mại điện tử
 
 ## Thành viên nhóm:
-**- 22022597 Trịnh Đắc Phú - Nhóm trưởng**
+- **22022597 Trịnh Đắc Phú - Nhóm trưởng**
 - 22022517 Bùi Tiến Sâm
 - 22022521 Nguyễn Văn Mạnh
 - 22022654 Triệu Vũ Hoàn
@@ -27,8 +27,7 @@ Hệ thống này được thiết kế với giao diện web có thể mở r�
 - Đánh giá và xếp hạng sản phẩm bởi người dùng.
 - Mua hàng và thanh toán.
 - Đề xuất sản phẩm theo sở thích của người dùng.
-- Trang hồ sơ lưu thông tin, ảnh đại diện người dùng. \
-\Tất cả các nội dung người dùng thấy đều được lấy từ cơ sở dữ liệu, và chỉ có quản trị viên mới có quyền tải lên nội dung. Trang web cũng cung cấp hệ thống đánh giá, cho phép người dùng đưa ra ý kiến và xếp hạng sản phẩm từ 1 đến 5. Quản trị viên có thể thêm sản phẩm mới để hiển thị cho người dùng khác. Hệ thống được thiết kế thân thiện với thiết bị di động và tối ưu hóa cho công cụ tìm kiếm để đảm bảo hiệu suất tốt hơn.
+- Trang hồ sơ lưu thông tin, ảnh đại diện người dùng.
 
 ## Yêu cầu
 ### Yêu cầu chức năng
