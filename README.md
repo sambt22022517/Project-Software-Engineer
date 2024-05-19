@@ -68,3 +68,10 @@ Hệ thống phải dễ sử dụng và thân thiện với người dùng. Ch�
 Thiết kế của hệ thống phải dễ nhìn và dễ nhớ, tạo cảm giác hài lòng cho người dùng.
 #### Đồ họa:
 Đồ họa chất lượng cao sẽ nâng cao trải nghiệm người dùng. Code phải được tối ưu hóa để đảm bảo chất lượng hiển thị ổn định trên mọi thiết bị phần cứng.
+
+## Cách sử dụng
+1. Tải repo trên về máy.
+2. Thực hiện `pip install -r requirements.txt`.
+3. Chuyển vị trí đến thư mục `webdjango/` chứa file `manage.py`.
+4. Chạy lệnh `python manage.py runserver`.
+5. Truy cập vào đường link [http://127.0.0.1:8000/shop/index/](http://127.0.0.1:8000/shop/index/) để trải nghiệm.
