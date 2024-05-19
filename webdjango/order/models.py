@@ -13,7 +13,7 @@ class ShopCart(models.Model):
     quantity = models.IntegerField()
 
     def __str__(self):
-        return self.product
+        return str(self.product)
 
     @property
     def amount(self):
@@ -78,4 +78,4 @@ class OrderDetail(models.Model):
     update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.product
+        return self.product.name
