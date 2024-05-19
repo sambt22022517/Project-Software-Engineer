@@ -83,11 +83,6 @@ def Myrecommend():
     mynf = 10
     Y = np.zeros((mynm, mynu))
 
-    user_to_column = {}  # Tạo một bản đồ từ tên người dùng sang chỉ số cột
-    # Duyệt qua tất cả các người dùng trong dataframe và gán mỗi tên người dùng với một chỉ số cột
-    for idx, user_name in enumerate(df["user_name"].unique()):
-        user_to_column[user_name] = idx
-
 
     print(R)
     Ynorm, Ymean = normalizeRatings(Y, R)
