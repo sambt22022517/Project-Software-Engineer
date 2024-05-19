@@ -81,25 +81,25 @@ class CustomChangePasswordForm(PasswordChangeForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        # help_text = "<ul>" \
-        #             "<li>Your password can't be too similar to " \
-        #             "your other personal information</li>" \
-        #             "<li>Your password must contain " \
-        #             "at least 14 characters</li>" \
-        #             "<li>Your password can't be a " \
-        #             "commonly used password</li>" \
-        #             "<li>Your password can't be " \
-        #             "entirely numeric</li>" \
-        #             "<li>Your password must not be " \
-        #             "the same as the current password</li>" \
-        #             "<li>Your password must use of " \
-        #             "both uppercase and lowercase letters</li>" \
-        #             "<li>Your password must include " \
-        #             "of one or more numerical digits</li>" \
-        #             "<li>Your password must include " \
-        #             "of special characters, such as @, #, $</li>" \
-        #             "</ul>"
-        # self.fields['new_password1'].help_text = help_text
+        help_text = "<ul>" \
+                    "<li>Your password can't be too similar to " \
+                    "your other personal information</li>" \
+                    "<li>Your password must contain " \
+                    "at least 14 characters</li>" \
+                    "<li>Your password can't be a " \
+                    "commonly used password</li>" \
+                    "<li>Your password can't be " \
+                    "entirely numeric</li>" \
+                    "<li>Your password must not be " \
+                    "the same as the current password</li>" \
+                    "<li>Your password must use of " \
+                    "both uppercase and lowercase letters</li>" \
+                    "<li>Your password must include " \
+                    "of one or more numerical digits</li>" \
+                    "<li>Your password must include " \
+                    "of special characters, such as @, #, $</li>" \
+                    "</ul>"
+        self.fields['new_password1'].help_text = help_text
 
     class Meta:
         fields = [
