@@ -9,7 +9,7 @@
 ## Công cụ sử dụng Django
 
 ## Link
-- Video demo: [Phần 1](https://drive.google.com/file/d/1HDooPjt8iCo6ZdVC9eA3jIbN_5o3R6fV/view?usp=sharing) [Phần 2](https://drive.google.com/file/d/1DtNcOZ4ylzWaLL4wzH78R5Kwy4TIUkFO/view?usp=sharing)
+- Video demo: [Phần 1](https://drive.google.com/file/d/1HDooPjt8iCo6ZdVC9eA3jIbN_5o3R6fV/view?usp=sharing) [Phần 2](https://drive.google.com/file/d/1hJeo3sig7DEvD2bspNlO4P2POcBdXMlg/view?usp=sharing)
 - Báo cáo: [báo cáo](https://drive.google.com/file/d/1uF8iMtrrwVpRUBa8nELy43tSiHoDsaRZ/view?usp=sharing)
 
 ## Persona
